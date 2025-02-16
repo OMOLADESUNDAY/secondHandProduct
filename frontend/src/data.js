@@ -1,0 +1,1 @@
+export const welcomeData='Welcome To Our Store'
