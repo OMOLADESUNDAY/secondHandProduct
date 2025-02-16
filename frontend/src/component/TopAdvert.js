@@ -9,6 +9,7 @@ import { AiOutlineTikTok } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io";
 import { welcomeData } from '../data';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import "../styles/topadvert.css"
 const TopAdvert = () => {
      // Initialize state with default title
   const [dropdownTitle, setDropdownTitle] = useState('United State USD $');
@@ -17,23 +18,26 @@ const TopAdvert = () => {
   const handleSelect = (eventKey) => {
     setDropdownTitle(eventKey);
   };
+  const handleLanguageSelect = (eventKey) => {
+    setLanguageTitle(eventKey);
+  };
   const [LanguageTitle, setLanguageTitle] = useState('English');
     return (
         <>
-          <Navbar bg="dark" data-bs-theme="dark">
-            <Container>
-                <Nav className="me-auto">
+          <Navbar bg="dark" data-bs-theme="dark" className='topAdContainer'>
+            <Container className='topadvertWrapper'>
+                <Nav className="me-auto leftTopAd">
                     <Nav.Link href="#home"><FaXTwitter /></Nav.Link>
                     <Nav.Link href="#features"><FaFacebook /></Nav.Link>
                     <Nav.Link href="#home"><IoLogoInstagram /></Nav.Link>
                     <Nav.Link href="#features"><AiOutlineTikTok /></Nav.Link>
                     <Nav.Link href="#features"><IoLogoLinkedin /></Nav.Link>
                 </Nav>
-                <Nav className="me-auto">
-                <Nav.Link href="#features"> <p>{welcomeData}</p></Nav.Link>
+                <Nav className="topadCenter" >
+                <Nav.Link href="#features" className='middleTopadCenter'> <span className='welcomeText' >{welcomeData}</span></Nav.Link>
                    
                 </Nav>
-                <Nav className="ms-auto">
+                <Nav className="ms-auto leftTopAd">
                     <NavDropdown title={dropdownTitle}id="basic-nav-dropdown"onSelect={handleSelect}>
                         <NavDropdown.Item eventKey="Australia USD $">Australia USD $</NavDropdown.Item>
                         <NavDropdown.Item eventKey="Bangladesh USD $">Bangladesh USD $</NavDropdown.Item>
@@ -43,16 +47,10 @@ const TopAdvert = () => {
                         <NavDropdown.Item eventKey="United States USD $">United States USD $</NavDropdown.Item>
                     </NavDropdown>
 
-                    <NavDropdown title={LanguageTitle} id="basic-nav-dropdown"onSelect={handleSelect}>
-                        <NavDropdown.Item eventKey="Action">Action</NavDropdown.Item>
-                        <NavDropdown.Item eventKey="Another action">
-                        Another action
-                        </NavDropdown.Item>
-                        <NavDropdown.Item eventKey="Something">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item eventKey="Separated link">
-                        Separated link
-                        </NavDropdown.Item>
+                    <NavDropdown title={LanguageTitle} id="basic-nav-dropdown"onSelect={handleLanguageSelect}>
+                        <NavDropdown.Item eventKey="Spanish">Spanish</NavDropdown.Item>
+                        <NavDropdown.Item eventKey=" Français">Français</NavDropdown.Item>
+                        <NavDropdown.Item eventKey="Something">English</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
             </Container>

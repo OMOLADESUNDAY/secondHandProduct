@@ -1,0 +1,26 @@
+.topAdContainer{
+   font-size: small;
+   
+}
+.welcomeText{
+    text-align: center;
+    font-weight: 600;
+}
+.topadvertWrapper a{
+    color: white !important;
+}
+@media screen and (max-width:1024px) {
+    .leftTopAd{
+        display: none !important;
+    }
+    .topadCenter{
+        width: 100%;
+        text-align: center;
+    }
+    .welcomeText{
+        width: 100%;
+    }
+    .middleTopadCenter{
+        width: 100%;
+    }
+}
