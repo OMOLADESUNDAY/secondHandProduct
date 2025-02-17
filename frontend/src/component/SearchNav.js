@@ -12,8 +12,25 @@ import { CiSearch } from "react-icons/ci";
 const SearchNav = () => {
   return (
     <>
-    <Navbar  className='searchNavContainer'>
+    <Navbar expand="lg" className='searchNavContainer'>
       <Container className='searchNavWrapper'>
+      <div className="d-lg-none">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#link">Link</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </div>
+        {/* Nav items for large screens */}
+        <div className="d-none d-lg-block">
+          <Nav className="me-auto collapse-toggler">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+          </Nav>
+        </div>
+
           <Nav className="me-auto ">
           <Image src={logo}  className='logoImage'/>
           </Nav>
@@ -31,6 +48,27 @@ const SearchNav = () => {
           <Nav className="ms-auto leftTopAd">
              
           </Nav>
+      </Container>
+    </Navbar>
+
+
+
+
+
+
+
+
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+           
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
     
