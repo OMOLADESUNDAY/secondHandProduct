@@ -8,9 +8,7 @@
     display: none !important;
     /* border: solid !important; */
 }
-.collapse{
-    display: none;
-}
+
 .searchNavCenter{
     width: 60% !important;
 }
@@ -21,10 +19,4 @@
 .searchForm{
     width: 100%;
     align-items: center;
-}
-@media (max-width: 991px){
-    .collapse-toggler {
-        display: block !important;
-    }
-    
 }

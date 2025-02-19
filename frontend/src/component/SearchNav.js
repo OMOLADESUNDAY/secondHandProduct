@@ -12,26 +12,26 @@ import { CiSearch } from "react-icons/ci";
 const SearchNav = () => {
   return (
     <>
-    <Navbar expand="lg" className='searchNavContainer'>
-      <Container className='searchNavWrapper'>
-      <div className="d-lg-none">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </div>
-        {/* Nav items for large screens */}
-        <div className="d-none d-lg-block">
+    <Navbar expand="" >
+      <Container className=''>
+
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      
+       
+        {/* <div className="d-none d-lg-block">
           <Nav className="me-auto collapse-toggler">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
           </Nav>
-        </div>
+        </div> */}
 
-          <Nav className="me-auto ">
+          {/* <Nav className="me-auto ">
           <Image src={logo}  className='logoImage'/>
           </Nav>
           <Nav className="searchNavCenter" >
@@ -47,7 +47,7 @@ const SearchNav = () => {
           </Nav>
           <Nav className="ms-auto leftTopAd">
              
-          </Nav>
+          </Nav> */}
       </Container>
     </Navbar>
 
@@ -58,7 +58,7 @@ const SearchNav = () => {
 
 
 
-    <Navbar expand="lg" className="bg-body-tertiary">
+    {/* <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -70,7 +70,7 @@ const SearchNav = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar> */}
     
   </>
   )
