@@ -8,6 +8,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'; 
 import "../styles/searchnav.css"
 import { CiSearch } from "react-icons/ci";
+import { RiUser3Line } from "react-icons/ri";
+import { FiHeart } from "react-icons/fi";
+import { RiShoppingBag4Line } from "react-icons/ri";
 
 const SearchNav = () => {
   return (
@@ -15,7 +18,7 @@ const SearchNav = () => {
     <Navbar expand="" >
       <Container className=''>
 
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className="d-lg-none"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
@@ -31,7 +34,7 @@ const SearchNav = () => {
           </Nav>
         </div> */}
 
-          {/* <Nav className="me-auto ">
+          <Nav className="me-auto ">
           <Image src={logo}  className='logoImage'/>
           </Nav>
           <Nav className="searchNavCenter" >
@@ -45,9 +48,13 @@ const SearchNav = () => {
            <CiSearch className='searchNavIcon'/>
           </Form>
           </Nav>
-          <Nav className="ms-auto leftTopAd">
-             
-          </Nav> */}
+          <Nav className="ms-auto ">
+            <div className='leftTopAd'>
+              <RiUser3Line className='searchNavmenuIcon'/>
+              <FiHeart className='searchNavmenuIcon' />
+              <RiShoppingBag4Line className='searchNavmenuIcon'/>
+            </div>
+          </Nav>
       </Container>
     </Navbar>
 

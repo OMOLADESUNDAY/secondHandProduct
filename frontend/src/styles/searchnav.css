@@ -20,3 +20,16 @@
     width: 100%;
     align-items: center;
 }
+.leftTopAd{
+    display: flex !important;
+    gap: 1rem;
+}
+.searchNavmenuIcon{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+@media screen and (max-width:1024px) {
+    .searchNavCenter{
+        display: none !important;
+    }
+}
