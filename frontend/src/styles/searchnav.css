@@ -29,9 +29,34 @@
     display: flex;
     gap: 1rem;
 }
+.popsearchNavIcon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bolder !important;
+}
+
 @media screen and (max-width:1024px) {
+    .logoCon{
+        width: 50%;
+        margin: auto;
+    }
+    .logoImage{
+       
+        margin: auto;
+    }
     .searchNavCenter{
         display: none !important;
     }
-    
+    .con{
+        position: relative;
+    }
+    .real-menu{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        padding: 2rem 0;
+        background-color: firebrick;
+        
+    }
 }

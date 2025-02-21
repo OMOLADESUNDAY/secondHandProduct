@@ -16,24 +16,15 @@ const SearchNav = () => {
   return (
     <>
     <Navbar expand="" >
-      <Container className=''>
+      <Container className='con'>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="d-lg-none"/>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto real-menu">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      
-       
-        {/* <div className="d-none d-lg-block">
-          <Nav className="me-auto collapse-toggler">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-          </Nav>
-        </div> */}
-
-          <Nav className="me-auto ">
+          <Nav className="me-auto logoCon">
           <Image src={logo}  className='logoImage'/>
           </Nav>
           <Nav className="searchNavCenter" >
@@ -49,12 +40,13 @@ const SearchNav = () => {
           </Nav>
           
           <Nav>
-          {/* <div className='leftTopAd'>
+        
+          <div className='leftTopAdvert'>
+          <CiSearch className='popsearchNavIcon'/>
               <RiUser3Line className='searchNavmenuIcon'/>
               <FiHeart className='searchNavmenuIcon' />
               <RiShoppingBag4Line className='searchNavmenuIcon'/>
-            </div> */}
-          ghyuuui
+            </div>
           </Nav>
            
         
