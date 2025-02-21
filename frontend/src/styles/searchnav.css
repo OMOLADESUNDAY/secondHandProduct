@@ -4,10 +4,7 @@
     object-fit: cover;
     border-radius: 50%;
 }
-.collapse-toggler{
-    display: none !important;
-    /* border: solid !important; */
-}
+
 
 .searchNavCenter{
     width: 60% !important;
@@ -21,15 +18,20 @@
     align-items: center;
 }
 .leftTopAd{
-    display: flex !important;
+    display: flex ;
     gap: 1rem;
 }
 .searchNavmenuIcon{
     font-size: 1.5rem;
     cursor: pointer;
 }
+.leftTopAdvert{
+    display: flex;
+    gap: 1rem;
+}
 @media screen and (max-width:1024px) {
     .searchNavCenter{
         display: none !important;
     }
+    
 }
