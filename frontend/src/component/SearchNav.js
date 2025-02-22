@@ -11,7 +11,7 @@ import { CiSearch } from "react-icons/ci";
 import { RiUser3Line } from "react-icons/ri";
 import { FiHeart } from "react-icons/fi";
 import { RiShoppingBag4Line } from "react-icons/ri";
-
+import { FaTimes } from "react-icons/fa";
 const SearchNav = () => {
   return (
     <>
@@ -20,6 +20,7 @@ const SearchNav = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="d-lg-none"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto real-menu">
+           <FaTimes className='cancel-menu'/>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
           </Nav>
