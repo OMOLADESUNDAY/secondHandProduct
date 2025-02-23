@@ -51,7 +51,7 @@
         position: relative;
     }
     .real-menu{
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -68,14 +68,21 @@
           left: 0;
         }
       }
-    .cancel-menu{
-        position: absolute;
-        top: 1rem;
+    .togg{
+        z-index: 100;
+        border: none !important;
+        /* position: absolute;
         right: 1rem;
-        font-size: 2rem;
-        cursor: pointer;
-        width:fit-content ;
-        border: solid;
-
+        top: 1rem; */
     }
+    
+    @keyframes removee {
+        from {
+            left: 0;
+          }
+          to {
+            left: -100%;
+          }
+    }
+  
 }
