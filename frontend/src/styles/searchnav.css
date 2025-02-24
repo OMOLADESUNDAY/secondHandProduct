@@ -36,6 +36,7 @@
 }
 
 @media screen and (max-width:1024px) {
+   
     .logoCon{
         width: 50%;
         margin: auto;
@@ -51,14 +52,15 @@
         position: relative;
     }
     .real-menu{
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        padding: 2rem 0;
-        background-color: firebrick;
-        animation: mover 0.5s ease-in-out;
+        padding: 2rem !important;
+        background-color: white;
+        transform: translateX(0);
+        animation: mover 1s ease-in-out;
     }
     @keyframes mover {
         from {
@@ -67,22 +69,59 @@
         to {
           left: 0;
         }
-      }
+      } 
     .togg{
-        z-index: 100;
+        z-index: 1;
         border: none !important;
-        /* position: absolute;
-        right: 1rem;
-        top: 1rem; */
+        position: absolute;
+        left: 10px; /* Default position */
+        transition: left 0.3s ease-in-out;
     }
-    
-    @keyframes removee {
+    .move-right {
+        top: -100%;
+        left: 90%; /* Moves to the right when nav is open */
+      }
+     
+
+    .moveout{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 2rem 0;
+        color: blue;
+        font-weight: bolder;
+        font-size: 2rem;
+        transform: translateX(-100%);
+        background-color: white;
+        animation: moveoutt 2s ease-in-out; 
+      }
+      @keyframes moveoutt {
         from {
-            left: 0;
+            left: 100%;
           }
           to {
             left: -100%;
           }
+      }
+      .homelink{
+        border: solid !important;
+      }
+      .tabsContainerw{
+        border: solid purple;
+      }
+      .tabsContainer {
+        display: flex !important;
+        flex-direction: row;
+        border: solid red ;
     }
-  
+    .navbar-nav{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-tabs{
+        display: flex;
+        flex-direction: row;
+    }
 }

@@ -11,21 +11,30 @@ import { CiSearch } from "react-icons/ci";
 import { RiUser3Line } from "react-icons/ri";
 import { FiHeart } from "react-icons/fi";
 import { RiShoppingBag4Line } from "react-icons/ri";
-import { FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 const SearchNav = () => {
-  const [menuCheck,setMenuCheck]=useState(false)
-  const menuChecker=()=>{
-    setMenuCheck(!menuCheck)
-  }
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <>
     <Navbar expand="" >
       <Container className='con'>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" className="d-lg-none togg" />
-        <Navbar.Collapse id="basic-navbar-nav" >
-          <Nav className='real-menu' >
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+      {/* <Navbar.Toggle aria-controls="basic-navbar-nav" className="d-lg-none togg" /> */}
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className={`d-lg-none togg ${isOpen ? 'move-right' : ''}`} onClick={handleToggle}>
+        {isOpen ? <FaTimes color="black" className='cancel ' size={24} /> : <FaBars color="black" size={24} />}
+      </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav"  >
+          <Nav className={isOpen?'real-menu':'moveout'} >
+            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="tabsContainer">
+            <Tab eventKey="home" title="Home">Tab content for Home</Tab>
+            <Tab eventKey="profile" title="Profile">Tab content for Profile</Tab>
+          </Tabs>
           </Nav>
         </Navbar.Collapse>
           <Nav className="me-auto logoCon">
@@ -42,9 +51,7 @@ const SearchNav = () => {
            <CiSearch className='searchNavIcon'/>
           </Form>
           </Nav>
-          
           <Nav>
-        
           <div className='leftTopAdvert'>
           <CiSearch className='popsearchNavIcon'/>
               <RiUser3Line className='searchNavmenuIcon'/>
