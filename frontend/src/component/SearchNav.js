@@ -13,7 +13,9 @@ import { FiHeart } from "react-icons/fi";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
+// import TabsCn from './Tabs';
+import Tabs from 'react-bootstrap/esm/Tabs';
+import PageNavbar from './PageNavbar';
 const SearchNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -31,9 +33,16 @@ const SearchNav = () => {
       </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav"  >
           <Nav className={isOpen?'real-menu':'moveout'} >
-            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="tabsContainer">
-            <Tab eventKey="home" title="Home">Tab content for Home</Tab>
-            <Tab eventKey="profile" title="Profile">Tab content for Profile</Tab>
+          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="tabsContainer">
+            <Tab eventKey="home" title="Home">
+              <PageNavbar/>
+            </Tab>
+            <Tab eventKey="profile" title="Profile">
+              Tab content for Profile
+            </Tab>
+            <Tab eventKey="contact" title="Contact" disabled>
+              Tab content for Contact
+            </Tab>
           </Tabs>
           </Nav>
         </Navbar.Collapse>
