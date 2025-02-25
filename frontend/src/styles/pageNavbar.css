@@ -1,0 +1,18 @@
+/* Hide default Bootstrap arrow */
+.accordion-button::after {
+    display: none !important;
+  }
+  
+  /* Style custom icon */
+  .changeAccordionIcon {
+    margin-right: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    right: 0;
+  }
+  
+  /* Optional: Animate the custom icon */
+  .accordion-button[aria-expanded="true"] .custom-icon {
+    transform: rotate(180deg);
+  }

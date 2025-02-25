@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Accordion from 'react-bootstrap/Accordion';
-
+import { FaPlus, FaMinus } from 'react-icons/fa';
+import "../styles/pageNavbar.css"
 const PageNavbar = () => {
+  const [activeKey, setActiveKey] = useState(null);
+
+  const handleToggle = (key) => {
+    setActiveKey(activeKey === key ? null : key);
+  };
+
   return (
     <Accordion defaultActiveKey="0">
     <Accordion.Item eventKey="0">
-      <Accordion.Header>Accordion Item #1</Accordion.Header>
+      <Accordion.Header  onClick={() => handleToggle("0")}> 
+         Accordion Item #1
+         <span className="changeAccordionIcon">
+            {activeKey === "0" ? <FaMinus /> : <FaPlus />}
+          </span>
+      </Accordion.Header>
       <Accordion.Body>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -17,7 +29,11 @@ const PageNavbar = () => {
       </Accordion.Body>
     </Accordion.Item>
     <Accordion.Item eventKey="1">
-      <Accordion.Header>Accordion Item #2</Accordion.Header>
+      <Accordion.Header>
+        Accordion Item #2 
+        <span className="changeAccordionIcon">
+        {activeKey === "0" ? <FaMinus /> : <FaPlus />}
+        </span></Accordion.Header>
       <Accordion.Body>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

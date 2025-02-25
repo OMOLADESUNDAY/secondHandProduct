@@ -15,7 +15,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Tab from 'react-bootstrap/Tab';
 // import TabsCn from './Tabs';
 import Tabs from 'react-bootstrap/esm/Tabs';
-import PageNavbar from './PageNavbar';
+import PageNavbar from './PageNumber';
 const SearchNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,9 +39,6 @@ const SearchNav = () => {
             </Tab>
             <Tab eventKey="profile" title="Profile">
               Tab content for Profile
-            </Tab>
-            <Tab eventKey="contact" title="Contact" disabled>
-              Tab content for Contact
             </Tab>
           </Tabs>
           </Nav>

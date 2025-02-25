@@ -115,5 +115,6 @@
     .tabsContainer {
         display: flex !important;
         flex-direction: row !important;
+        gap: 2rem !important;
     }
 }
