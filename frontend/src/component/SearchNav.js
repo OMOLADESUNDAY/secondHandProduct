@@ -4,7 +4,6 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'; 
 import "../styles/searchnav.css"
 import { CiSearch } from "react-icons/ci";
@@ -13,7 +12,6 @@ import { FiHeart } from "react-icons/fi";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Tab from 'react-bootstrap/Tab';
-// import TabsCn from './Tabs';
 import Tabs from 'react-bootstrap/esm/Tabs';
 import PageNavbar from './PageNumber';
 const SearchNav = () => {
@@ -27,7 +25,6 @@ const SearchNav = () => {
     <>
     <Navbar expand="" >
       <Container className='con'>
-      {/* <Navbar.Toggle aria-controls="basic-navbar-nav" className="d-lg-none togg" /> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" className={`d-lg-none togg ${isOpen ? 'move-right' : ''}`} onClick={handleToggle}>
         {isOpen ? <FaTimes color="black" className='cancel ' size={24} /> : <FaBars color="black" size={24} />}
       </Navbar.Toggle>
@@ -65,8 +62,6 @@ const SearchNav = () => {
               <RiShoppingBag4Line className='searchNavmenuIcon'/>
             </div>
           </Nav>
-           
-        
       </Container>
     </Navbar>
 

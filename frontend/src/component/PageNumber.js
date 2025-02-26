@@ -12,10 +12,10 @@ const PageNavbar = () => {
   return (
     <Accordion defaultActiveKey="0">
     <Accordion.Item eventKey="0">
-      <Accordion.Header  onClick={() => handleToggle("0")}> 
-         Accordion Item #1
-         <span className="changeAccordionIcon">
-            {activeKey === "0" ? <FaMinus /> : <FaPlus />}
+      <Accordion.Header > 
+         page
+         <span className="changeAccordionIcon" id={0} >
+            {activeKey === "0" ? <FaMinus  onClick={() => handleToggle("0")} /> : <FaPlus  onClick={() => handleToggle("0")} />}
           </span>
       </Accordion.Header>
       <Accordion.Body>
@@ -32,7 +32,7 @@ const PageNavbar = () => {
       <Accordion.Header>
         Accordion Item #2 
         <span className="changeAccordionIcon">
-        {activeKey === "0" ? <FaMinus /> : <FaPlus />}
+        {activeKey === "1" ? <FaMinus /> : <FaPlus />}
         </span></Accordion.Header>
       <Accordion.Body>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
