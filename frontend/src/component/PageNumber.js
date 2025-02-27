@@ -3,6 +3,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import "../styles/pageNavbar.css"
 import Nav from 'react-bootstrap/Nav';
+import { MdOutlineShoppingCart } from "react-icons/md";
+import Badge from 'react-bootstrap/Badge';
 const PageNavbar = () => {
   const [activeKey, setActiveKey] = useState(null);
 
@@ -93,9 +95,16 @@ const PageNavbar = () => {
         culpa qui officia deserunt mollit anim id est laborum.
       </Accordion.Body>
     </Accordion.Item>
-    <Accordion.Item eventKey="7">
+    <Accordion.Item>
       <Accordion.Header className='blognavsmall'>
         <Nav.Link className='blognavsmall'>Blogs</Nav.Link>
+      </Accordion.Header>
+    </Accordion.Item>
+    <Accordion.Item>
+      <Accordion.Header className='blognavsmall'>
+        <Nav.Link className='blognavsmall'>
+          <MdOutlineShoppingCart /><Badge bg="danger">9</Badge>
+          </Nav.Link>
       </Accordion.Header>
     </Accordion.Item>
   </Accordion>
