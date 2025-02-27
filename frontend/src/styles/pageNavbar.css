@@ -11,7 +11,10 @@
     position: absolute;
     right: 0;
   }
-  
+  .blognavsmall{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   /* Optional: Animate the custom icon */
   .accordion-button[aria-expanded="true"] .custom-icon {
     transform: rotate(180deg);

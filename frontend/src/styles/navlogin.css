@@ -1,0 +1,12 @@
+.logbtn{
+    width: 100% !important;
+    border: 1px solid !important;
+   
+}
+.navlogin{
+    background-color:rgb(236, 29, 35) !important;
+    color: white !important;
+    font-weight: 300 !important;
+    margin: 1rem 0;
+    text-align: center;
+}

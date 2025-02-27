@@ -14,6 +14,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/esm/Tabs';
 import PageNavbar from './PageNumber';
+import NavLogs from './NavLogs';
 const SearchNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,11 +34,13 @@ const SearchNav = () => {
           <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="tabsContainer">
             <Tab eventKey="home" title="Home">
               <PageNavbar/>
+              <NavLogs/>
             </Tab>
             <Tab eventKey="profile" title="Profile">
               Tab content for Profile
             </Tab>
           </Tabs>
+        
           </Nav>
         </Navbar.Collapse>
           <Nav className="me-auto logoCon">
