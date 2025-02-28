@@ -15,6 +15,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/esm/Tabs';
 import PageNavbar from './PageNumber';
 import NavLogs from './NavLogs';
+import Category from './Category';
 const SearchNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,8 +37,8 @@ const SearchNav = () => {
               <PageNavbar/>
               <NavLogs/>
             </Tab>
-            <Tab eventKey="profile" title="Profile">
-              Tab content for Profile
+            <Tab eventKey="category" title="category">
+             <Category/>
             </Tab>
           </Tabs>
         
