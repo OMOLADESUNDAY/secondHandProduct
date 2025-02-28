@@ -1,0 +1,6 @@
+.navbarContainer{
+    display: flex;
+}
+.navbarleftside{
+    cursor: pointer;
+}
