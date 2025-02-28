@@ -1,6 +1,16 @@
 .navbarContainer{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 .navbarleftside{
     cursor: pointer;
+}
+.outerCategoryContainer{
+    position: absolute;
+    left: -100%;
+    width: fit-content;
+    min-height: fit-content;
+    padding: 1rem 2rem;
 }
