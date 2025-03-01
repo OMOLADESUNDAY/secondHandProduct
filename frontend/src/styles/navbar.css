@@ -3,6 +3,9 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
 }
 .navbarleftside{
     cursor: pointer;
@@ -13,4 +16,47 @@
     width: fit-content;
     min-height: fit-content;
     padding: 1rem 2rem;
+    transition:translateX(0);
+  
+}
+.outerCategoryNav{
+    flex-direction: column !important;
+}
+.moveout{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 20%;
+    min-height:45vh;
+    padding: 1rem 2rem;
+    overflow: auto;
+    background-color: whitesmoke;
+    color: black;
+    transition:translateX(0);
+    animation: mover 0.5s ease-in-out;
+}
+@keyframes mover {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  } 
+.horiLine{
+    margin:0  !important;
+}
+.categorymenu{
+    font-size: 1.5rem !important;
+    margin-right: 0.5rem;
+}
+.navbarRight{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+@media screen and (max-width:1024px){
+    .navbarContainer{
+        display: none;
+    }
 }
