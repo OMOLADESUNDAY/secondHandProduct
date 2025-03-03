@@ -9,16 +9,17 @@
 .filtertext>small{
     margin: 0.5rem 0;
 }
-.rmhover{
-    display: none;
-}
+
 .hovermessage{
     position: absolute;
     top: -35px;
     right: -30px;
-    background-color: rgb(21, 21, 20);
-    color: white;
+    background-color: rgb(255, 255, 251);
+    color: black;
     padding: 5px;
+}
+.rmhover{
+    display: none !important;
 }
 .filterSelectContainer{
     width: 90%;

@@ -3,12 +3,31 @@ import { GoQuestion } from "react-icons/go";
 import '../styles/filter.css'
 const Filter = () => {
     const [hover,setHover]=useState(false)
-    const [message,setMessage]=useState()
-    const displayHover=()=>{
+    const [producttypeMessage,setProducttypeMessage]=useState('')
+    const [brandMessage,setBrandMessage]=useState('')
+    const [colorMessage,setColorMessage]=useState('')
+    const displayHover=(message)=>{
         setHover(true)
+        if(message === "product type"){
+            setProducttypeMessage(message)
+            setBrandMessage('')
+            setColorMessage('')
+        }
+        if(message === "brand"){
+            setProducttypeMessage('')
+            setBrandMessage(message)
+            setColorMessage('')
+        }
+        if(message === "color"){
+            setProducttypeMessage('')
+            setBrandMessage('')
+            setColorMessage(message)
+        }
+       
+        // setMessage(message)
         setTimeout(()=>{
             setHover(false)
-        },800)
+        },1500)
     }
    
     
@@ -18,8 +37,8 @@ const Filter = () => {
         <form className=''>
             <div className='filtertext'>
                 <small>product type</small>
-                <GoQuestion  onMouseOver={()=>displayHover('producttype')}/>
-                <small className={hover?'hovermessage':'rmhover'}>product type</small>
+                <GoQuestion  onMouseOver={()=>displayHover('product type')}/>
+                <small className={hover?'hovermessage':'rmhover'}>{producttypeMessage}</small>
             </div>
             <div className='filterSelectContainer'>
                 <select className='filterSelect'>
@@ -29,9 +48,9 @@ const Filter = () => {
             </div>
 
             <div className='filtertext'>
-                <small>product type</small>
-                <GoQuestion />
-                <small className={hover?'hovermessage':'rmhover'}>product type</small>
+                <small>brand</small>
+                <GoQuestion onMouseOver={()=>displayHover('brand')}/>
+                <small className={hover?'hovermessage':'rmhover'}>{brandMessage}</small>
             </div>
             <div className='filterSelectContainer'>
                 <select className='filterSelect'>
@@ -41,9 +60,9 @@ const Filter = () => {
             </div>
 
             <div className='filtertext'>
-                <small>product type</small>
-                <GoQuestion onTouchMove={displayHover} />
-                <small className={hover?'hovermessage':'rmhover'}>product type</small>
+                <small>color</small>
+                <GoQuestion onMouseOver={()=>displayHover('color')} />
+                <small className={hover?'hovermessage':'rmhover'}>{colorMessage}</small>
             </div>
             <div className='filterSelectContainer'>
                 <select className='filterSelect'>
