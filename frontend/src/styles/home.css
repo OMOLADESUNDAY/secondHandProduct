@@ -1,5 +1,7 @@
 .HomeContainer{
     display: flex;
+    height: 300px;
+    border:solid red ;
 }
 .filterComponentContainer{
     width: 30%;
@@ -8,4 +10,5 @@
 }
 .HomecarouselCont{
     width: 70%;
+    
 }

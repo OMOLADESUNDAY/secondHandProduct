@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import ExampleCarouselImage from '../assest/WhatsApp Image 2025-02-16 at 6.26.47 PM.jpeg';
 const HomeCarousel = () => {
   return (
-    <Carousel>
+    <Carousel style={{height:""}}>
       <Carousel.Item>
         <img alt='k' src={ExampleCarouselImage} text="First slide" />
         <Carousel.Caption>
