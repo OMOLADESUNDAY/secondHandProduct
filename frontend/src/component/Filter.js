@@ -32,7 +32,7 @@ const Filter = () => {
    
     
   return (
-    <div>
+    <div className='filtercontainer'>
         <h4>Advanced Search Filter</h4>
         <form className=''>
             <div className='filtertext'>
