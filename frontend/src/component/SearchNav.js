@@ -32,7 +32,7 @@ const SearchNav = () => {
       </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav"  >
           <Nav className={isOpen?'real-menu':'moveout'} >
-          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="tabsContainer">
+          <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="tabsContainer">
             <Tab eventKey="home" title="Home">
               <PageNavbar/>
               <NavLogs/>

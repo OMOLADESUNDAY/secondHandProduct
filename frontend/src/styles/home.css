@@ -16,3 +16,16 @@
     width: 70%;
     
 }
+@media screen and (max-width:1024px) {
+    .HomeContainer{
+        flex-direction:column;
+        /* flex-direction: column-reverse; */
+        /* border: solid red; */
+    }
+    .HomecarouselCont{
+        width: 100%;
+    }
+    .filterComponentContainer{
+        width: 100%;
+    }
+}

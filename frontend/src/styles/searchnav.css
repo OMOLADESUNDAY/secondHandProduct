@@ -62,6 +62,7 @@
         transform: translateX(0);
         animation: mover 1s ease-in-out;
         overflow: auto;
+        z-index: 10;
     }
     @keyframes mover {
         from {

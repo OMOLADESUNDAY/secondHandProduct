@@ -7,7 +7,7 @@ import '../styles/homecarousel.css'
 import Button from 'react-bootstrap/Button';
 const HomeCarousel = () => {
   return (
-    <Carousel className='carouselcontainer'>
+    <Carousel className='carouselcontainer'controls={false}>
       <Carousel.Item>
         <img alt='k' src={ExampleCarouselImage} className='carouselImage' text="First slide" />
         <Carousel.Caption className='carouselCaption'>
