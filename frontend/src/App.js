@@ -3,6 +3,7 @@ import Navbarr from './component/Navbar';
 import SearchNav from './component/SearchNav';
 import TopAdvert from './component/TopAdvert';
 import Home from './pages/Home';
+import TrendingCategory from './pages/TrendingCategory';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <SearchNav/>
       <Navbarr/>
       <Home/>
+      <TrendingCategory/>
     </div>
   );
 }
