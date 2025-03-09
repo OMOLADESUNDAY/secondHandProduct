@@ -7,10 +7,29 @@
     height: 71vh;
     object-fit: cover;
     border-radius: 10px;
+    display: block !important;
 }
 .carouselCaption{
     position: absolute;
     top: 30%;
     left: 10px !important;
     text-align: left !important;
+}
+@media screen and (max-width:1024px) {
+   
+    .carouselCaption{
+        position: static !important;
+        color: black !important;
+        text-align: center !important;
+    }
+    .carouselItem{
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem;
+    }
+   
+    .remove-carousel{
+        display: none !important;
+    }
+    
 }

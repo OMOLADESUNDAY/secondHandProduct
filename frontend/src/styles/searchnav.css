@@ -82,6 +82,7 @@
     .move-right {
         top: -100%;
         left: 90%; /* Moves to the right when nav is open */
+        z-index: 19 !important;
       }
      
 
