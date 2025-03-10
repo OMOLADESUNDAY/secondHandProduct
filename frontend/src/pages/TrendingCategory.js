@@ -10,10 +10,10 @@ const TrendingCategory = () => {
             <div key={trendingitem.id}>
                 <div className='trendcat-text-container'>
                   <h5><Link>{trendingitem.name}</Link></h5>
-                  <p><Link>{}</Link></p>
-                  <p><Link>{}</Link></p>
-                  <p><Link>{}</Link></p>
-                  <p><Link>{}</Link></p>
+                  <p><Link>{trendingitem.linkname1}</Link></p>
+                  <p><Link>{trendingitem.linkname2}</Link></p>
+                  <p><Link>{trendingitem.linkname3}</Link></p>
+                  <p><Link>{trendingitem.linkname4}</Link></p>
                   <h5><Link>SHOW NOW <span>&gt;&gt;&gt;</span></Link></h5>
                 </div>
                 <div className='trendcat-image-container'>
