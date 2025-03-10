@@ -17,7 +17,7 @@ const TrendingCategory = () => {
                   <h5><Link>SHOW NOW <span>&gt;&gt;&gt;</span></Link></h5>
                 </div>
                 <div className='trendcat-image-container'>
-
+                  <img src={trendingitem.img} alt="" />
                 </div>
 
             </div>
