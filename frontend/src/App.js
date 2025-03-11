@@ -1,4 +1,5 @@
 import './App.css';
+import FeaturedProduct from './component/FeaturedProduct';
 import Navbarr from './component/Navbar';
 import SearchNav from './component/SearchNav';
 import TopAdvert from './component/TopAdvert';
@@ -13,6 +14,7 @@ function App() {
       <Navbarr/>
       <Home/>
       <TrendingCategory/>
+      <FeaturedProduct/>
     </div>
   );
 }

@@ -1,0 +1,19 @@
+.topfeaturedproduct{
+    display: flex !important;
+    position: relative;
+}
+.features-tabs{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    /* border: solid; */
+    width: 100%;
+
+}
+.features-tab{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    /* border: solid; */
+}

@@ -1,7 +1,8 @@
 .filtercontainer{
-    margin: 10px 5px;
+    padding: 10px 5px;
     border-radius: 10px;
     height: 100%;
+    /* margin: 0; */
 }
 .filtertext{
     display: flex;
