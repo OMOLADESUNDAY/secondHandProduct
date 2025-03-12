@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import StarRating from "./StarRating";
 import '../styles/productcard.css'
 const ProductCard = ({singlefeaturedproduct}) => {
   return (
@@ -12,6 +13,8 @@ const ProductCard = ({singlefeaturedproduct}) => {
           {singlefeaturedproduct.description}
         </Card.Text>
         <Button variant="primary">Add to Cart</Button>
+        <StarRating rating={singlefeaturedproduct.rating} />
+        <small className="text-gray-600">Rating: {singlefeaturedproduct.rating.toFixed(1)} / 5</small>
       </Card.Body>
     </Card>
   )
