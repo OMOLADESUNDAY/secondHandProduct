@@ -1,8 +1,8 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import StarRating from "./StarRating";
 import '../styles/productcard.css'
+import StarRating from './StarRating';
 const ProductCard = ({singlefeaturedproduct}) => {
   return (
     <Card style={{ width: '18rem' }}>
@@ -13,8 +13,8 @@ const ProductCard = ({singlefeaturedproduct}) => {
           {singlefeaturedproduct.description}
         </Card.Text>
         <Button variant="primary">Add to Cart</Button>
-        <StarRating rating={singlefeaturedproduct.rating} />
-        <small className="text-gray-600">Rating: {singlefeaturedproduct.rating.toFixed(1)} / 5</small>
+        <StarRating rating={singlefeaturedproduct.rating}/>
+        <small>No of reviews: {singlefeaturedproduct.no_of_reveiw}</small>
       </Card.Body>
     </Card>
   )

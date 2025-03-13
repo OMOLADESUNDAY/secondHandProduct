@@ -20,3 +20,15 @@
     justify-content: center;
     gap: 2rem;
 }
+@media screen and (max-width:789px){
+    .topfeaturedproduct{
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem !important;
+    }
+    .features-tab{
+        margin-top: 1rem !important;
+        padding-top:1rem ;
+    }
+}
