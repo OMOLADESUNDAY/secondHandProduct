@@ -14,7 +14,7 @@ const FeaturedProduct = () => {
   return (
         <div >
          <section className="tabs-container">
-         <div><h4>Featured Product</h4></div>
+         <div className='feature-text'><h4>Featured Product</h4></div>
          <div className="tabs">
         <button className={activeTab === "tab1" ? "active" : ""} onClick={() => setActiveTab("tab1")}>
           New
@@ -53,9 +53,8 @@ const FeaturedProduct = () => {
                 <div key={singlefeaturedproduct.id} >
                      <ProductCard singlefeaturedproduct={singlefeaturedproduct}/>
                 </div>
-                             )
+                  )
             })}
-            
             </div>:''}
       </div>
     </div>
