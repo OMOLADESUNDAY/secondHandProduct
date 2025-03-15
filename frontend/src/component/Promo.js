@@ -12,9 +12,7 @@ const Promo = () => {
           <h4>High-Quality Engine Auto Parts</h4>
           <button className='btn-shop'>shop now</button>
         </div>
-        
       </div>
-
       <div className='right-promo'>
         <img src={promoImage2} alt="promo" className='promo-img' />
         <div className='promo-content'>

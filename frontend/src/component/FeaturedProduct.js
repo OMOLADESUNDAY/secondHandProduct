@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
 import '../styles/featuredstyles.css'
 import { products } from '../data';
 import ProductCard from './ProductCard';
@@ -8,7 +6,6 @@ import ProductCard from './ProductCard';
 let featuredProduct= products.filter((singleproduct)=>singleproduct.category==="featured")
 let automobile= products.filter((singleproduct)=>singleproduct.category==="auto mobile")
 let phone= products.filter((singleproduct)=>singleproduct.category==="phones")
-console.log(featuredProduct)
 const FeaturedProduct = () => {
    const [activeTab,setActiveTab]=useState('tab1')
   return (
