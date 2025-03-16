@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 :root {
     --primary-color: rgb(236, 29, 35);
     --secondary-color: #2ecc71;
     --font-size: 16px;
     --spacing: 10px;
+  }
+  body{
+    font-family: "Mulish", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: 200 !important;
+    font-style: normal !important;
   }

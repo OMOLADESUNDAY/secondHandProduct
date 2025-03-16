@@ -1,3 +1,36 @@
 .today-deal-container{
     margin-top:2rem ;
+    
+}
+.today-deal-item-contianer{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: auto;
+    
+}
+.single-today-deal-container{
+    width: 49% !important;
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.single-today-deal-container:hover{
+    transform: scale(1.05);
+}
+@media screen and (max-width:1024px) {
+    .today-deal-item-contianer{
+        flex-direction: column;
+        /* justify-content: center !important; */
+        align-items: center;
+    }
+    .single-today-deal-container{
+        width: 90% !important;
+    }
 }

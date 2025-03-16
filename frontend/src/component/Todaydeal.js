@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { products } from '../data'
 import '../styles/topdeal.css'
-import SingleTodayeDeal from './singleTodayeDeal'
+import SingleTodayDeal from './SingleTodayDeal';
+
 const Todaydeal = () => {
   const [Tdeal, setTdeal] = useState([]);
 
@@ -23,13 +24,10 @@ const Todaydeal = () => {
     return (
     <div className='today-deal-container'>
         <div> <h3>Deals of the day</h3></div>
-       <section>
+       <section className='today-deal-item-contianer'>
         {Tdeal.map((singledeal)=>{
           return(
-            <div key={singledeal.id}>
-              <div>{singledeal}</div>
-              <SingleTodayeDeal todaydeal={singledeal}/>
-            </div>
+              <SingleTodayDeal  className='single-today-deal-container' key={singledeal.id} todaydeal={singledeal}/>
           )
         })}
        </section>

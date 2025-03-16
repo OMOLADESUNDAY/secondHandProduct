@@ -63,8 +63,8 @@ const Navbarr = () => {
             </Nav.Item>
           </Nav>
         </article>
-      <Nav>
-      <Nav.Item>
+      <Nav className='navbar-ul'>
+      <Nav.Item >
         <Nav.Link href="/home">Home</Nav.Link>
       </Nav.Item>
       <Nav.Item>

@@ -19,6 +19,9 @@
     transition:translateX(0);
   
 }
+.navbar-ul a{
+    color: white !important;
+}
 .outerCategoryNav{
     flex-direction: column !important;
 }
