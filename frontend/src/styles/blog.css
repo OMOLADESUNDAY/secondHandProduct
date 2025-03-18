@@ -1,0 +1,30 @@
+.blog-container{
+    padding: 2rem;
+}
+.swiper-container{
+    width: 100% !important;
+}
+.swiper-container{
+    padding: 2rem 0;
+}
+.blog-image{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+.blog-txt{
+    text-align: center;
+}
+.blog-text{
+    font-size: 20px;
+    
+    color: black;
+    padding: 1rem;
+}
+.blog-learn-more{
+    padding-left: 1rem;
+}
+.blog-link{
+    text-decoration: none !important;
+    color: black;
+}
