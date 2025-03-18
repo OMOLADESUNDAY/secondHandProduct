@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import '../styles/blog.css'
+import SingleBlog from './SingleBlog';
 
 
 const newsApikey=process.env.REACT_APP_NEWSAPIKEY
@@ -64,13 +65,8 @@ const Blog = () => {
         >   
         {articles.length === 0 ? <p>No news available</p> : 
             articles.map((article, index) => (
-              
                 <SwiperSlide key={index} className='swiper-slider'>
-                    <Link className='blog-link'>
-                      <img src={article.urlToImage} alt={article.title} className='blog-image' />
-                      <h3 className='blog-text'>{article.title}</h3>
-                    </Link>
-                    <Link className='blog-learn-more blog-link'><small>learn more &gt;</small></Link>
+                  <SingleBlog  article={article} index={index}/>
                 </SwiperSlide>
             ))
           }

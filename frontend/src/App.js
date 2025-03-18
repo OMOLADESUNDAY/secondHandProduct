@@ -1,6 +1,8 @@
 import './App.css';
 import Blog from './component/Blog';
+import Faq from './component/Faq';
 import FeaturedProduct from './component/FeaturedProduct';
+import Footer from './component/Footer';
 import Navbarr from './component/Navbar';
 import Promo from './component/Promo';
 import SearchNav from './component/SearchNav';
@@ -23,6 +25,8 @@ function App() {
       <Todaydeal/>
       <Sponsors/>
       <Blog/>
+      <Faq/>
+      <Footer/>
     </div>
   );
 }

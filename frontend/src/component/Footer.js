@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Accordion from 'react-bootstrap/Accordion';
+import { FaPlus, FaMinus } from 'react-icons/fa';
+import "../styles/footer.css"
 
 const Footer = () => {
+  
   return (
-    <section>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
+   <div>
+    
+   </div>
+    
   )
 }
 

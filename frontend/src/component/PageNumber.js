@@ -13,7 +13,9 @@ const PageNavbar = () => {
   };
 
   return (
-    <Accordion defaultActiveKey="1">
+
+    
+    <Accordion >
     <Accordion.Item eventKey="1">
       <Accordion.Header>
         Shop
