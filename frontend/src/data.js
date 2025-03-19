@@ -111,7 +111,7 @@ export const products = [
     {sold:38,no_of_reveiw: 29, category: 'featured', id: 42, name: 'Cookbook', image: 'https://i.im.ge/2025/03/12/pdPyYP.still-life-rendering-jackets-display-23-2149745045.jpeg', price: 24.99, no_of_stock: 60, author: 'Chef C', genre: 'Cook',rating:4.6}
 ]
 
-export const testimonials = [
+export const testimonialdata = [
     {
       id: 1,
       name: "John Doe",

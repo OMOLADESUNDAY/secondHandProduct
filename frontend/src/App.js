@@ -9,6 +9,7 @@ import SearchNav from './component/SearchNav';
 import Sponsors from './component/Sponsors';
 import Todaydeal from './component/Todaydeal';
 import TopAdvert from './component/TopAdvert';
+import WhatClientSay from './component/WhatClientSay';
 import Home from './pages/Home';
 import TrendingCategory from './pages/TrendingCategory';
 
@@ -26,6 +27,7 @@ function App() {
       <Sponsors/>
       <Blog/>
       <Faq/>
+      <WhatClientSay/>
       <Footer/>
     </div>
   );
