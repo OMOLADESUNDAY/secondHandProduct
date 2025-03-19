@@ -12,7 +12,7 @@ import "../styles/footer.css"
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Container from 'react-bootstrap/Container';
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Footer = () => {
 
@@ -121,6 +121,7 @@ const Footer = () => {
                       type="email"
                       placeholder="Enter Your Email"
                     />
+                    <FaLongArrowAltRight className='arrowsubmit'/>
                   </span>
                 </form>
               </>
