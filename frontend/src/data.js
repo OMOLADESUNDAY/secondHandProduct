@@ -110,3 +110,80 @@ export const products = [
     {sold:38,no_of_reveiw: 9, category: 'featured', id: 41, name: 'Science Book', image: 'https://i.im.ge/2025/03/12/pdtcvh.s-l500-removebg-preview.png', price: 19.99, no_of_stock: 80, author: 'Author B', genre: 'Science', rating: 4.2 },
     {sold:38,no_of_reveiw: 29, category: 'featured', id: 42, name: 'Cookbook', image: 'https://i.im.ge/2025/03/12/pdPyYP.still-life-rendering-jackets-display-23-2149745045.jpeg', price: 24.99, no_of_stock: 60, author: 'Chef C', genre: 'Cook',rating:4.6}
 ]
+
+export const testimonials = [
+    {
+      id: 1,
+      name: "John Doe",
+      position: "CEO",
+      company: "Tech Solutions Inc.",
+      image: "https://i.im.ge/2025/03/19/pI57fY.woman-is-holding-notebook-pen-740686-7603-removebg-preview.png",
+      content: "This product has completely transformed our workflow. Highly recommended!",
+      rating: 5,
+    },
+    {
+      id: 2,
+      name: "Jane Smith",
+      position: "Marketing Manager",
+      company: "Creative Agency Ltd.",
+      image: "https://i.im.ge/2025/03/19/pI5sdh.employee-crossing-her-arms-while-wearing-formal-business-suit-13339-92074-removebg-preview-1.png",
+      content: "Excellent service and support. The team is always ready to help.",
+      rating: 4.5,
+    },
+    {
+      id: 3,
+      name: "Alice Johnson",
+      position: "Software Engineer",
+      company: "Innovate Tech",
+      image: "https://i.im.ge/2025/03/19/pI5dJ8.happy-woman-blazer-transparent-png-53876-996198-removebg-preview.png",
+      content: "A game-changer for our development process. Very intuitive and easy to use.",
+      rating: 5,
+    },
+    {
+      id: 4,
+      name: "Bob Brown",
+      position: "Product Manager",
+      company: "NextGen Solutions",
+      image: "https://i.im.ge/2025/03/19/pI5SxX.handsome-young-businessman-suit-273609-6513-removebg-preview.png",
+      content: "The best tool we've ever used. It has significantly improved our productivity.",
+      rating: 4.8,
+    },
+    {
+      id: 5,
+      name: "Charlie Davis",
+      position: "CTO",
+      company: "FutureTech",
+      image: "https://i.im.ge/2025/03/19/pI52I9.medium-shot-man-working-as-lawyer-23-2151202439-removebg-preview.png",
+      content: "Reliable and efficient. We've seen a huge improvement in our operations.",
+      rating: 4.7,
+    },
+    {
+      id: 6,
+      name: "Kelvin Trey",
+      position: "Entreprenuer",
+      company: "NTech",
+      image: "https://i.im.ge/2025/03/19/pI5TSJ.black-cheerful-young-businessman-isolated-transparent-background-932772-12900-removebg-preview-1.png",
+      content: "Reliable and efficient. We've seen a huge improvement in our operations.",
+      rating: 4.7,
+    },
+    {
+      id: 7,
+      name: "David Ademola",
+      position: "Business Expert",
+      company: "Smatex",
+      image: "https://i.im.ge/2025/03/19/pI5XfS.medium-shot-beautiful-woman-with-braids-23-2151429443-removebg-preview.png",
+      content: "Reliable and efficient. We've seen a huge improvement in our operations.",
+      rating: 4.7,
+    },
+    {
+      id: 8,
+      name: "Gabriel Flora",
+      position: "Manager",
+      company: "JustTech",
+      image: "https://i.im.ge/2025/03/19/pI51MK.charismatic-businesswoman-with-folded-arms-13339-40381-removebg-preview.png",
+      content: "Reliable and efficient. We've seen a huge improvement in our operations.",
+      rating: 4.7,
+    },
+  ];
+  
+  

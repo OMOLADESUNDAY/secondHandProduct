@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/blog.css'
 import {Link} from 'react-router-dom'
-import { SwiperSlide } from 'swiper/react';
-const SingleBlog = ({article,index}) => {
+
+const SingleBlog = ({article}) => {
   return (
         <>
         <div className='slide-swiper-container'>
