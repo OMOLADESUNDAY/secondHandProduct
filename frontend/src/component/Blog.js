@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -51,7 +50,7 @@ const Blog = () => {
     <div className='blog-container'>
         <h2 className='blog-txt'>Latest Blog</h2>
         <div className='swiper-container'>
-        <Swiper
+        <Swiper className='swipper'
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={3}
