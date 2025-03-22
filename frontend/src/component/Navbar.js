@@ -3,6 +3,7 @@ import '../styles/navbar.css'
 import { GiHamburgerMenu } from "react-icons/gi";
 import Nav from 'react-bootstrap/Nav';
 import { FiPhone } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 const Navbarr = () => {
   const [moveOut,setMoveout]=useState(false)
   const togglerRef = useRef(null)
@@ -31,56 +32,56 @@ const Navbarr = () => {
         <article  ref={togglerRef} className={moveOut?'moveout':'outerCategoryContainer'}>
               <Nav className='outerCategoryNav'>
             <Nav.Item>
-              <Nav.Link href="/home">Electronics</Nav.Link>
+              <Link className='nav-link' href="/home">Electronics</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link>Health Products</Nav.Link>
+              <Link className='nav-link'>Health Products</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link >Fashion</Nav.Link>
+              <Link className='nav-link'>Fashion</Link>
               <hr className='horiLine' />
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link to=''>Auto Mobiles</Nav.Link>
+              <Link className='nav-link' to=''>Auto Mobiles</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link >Phones</Nav.Link>
+              <Link className='nav-link' >Phones</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link>Books</Nav.Link>
+              <Link className='nav-link'>Books</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link to=''>Shoes</Nav.Link>
+              <Link className='nav-link' to=''>Shoes</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link to=''>All Categories</Nav.Link>
+              <Link className='nav-link' to=''>All Categories</Link>
             </Nav.Item>
           </Nav>
         </article>
       <Nav className='navbar-ul'>
       <Nav.Item >
-        <Nav.Link href="/home">Home</Nav.Link>
+        <Link className='nav-link' to="/">Home</Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link>Shop</Nav.Link>
+        <Link className='nav-link' to="/shop">Shop</Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link >Category</Nav.Link>
+        <Link className='nav-link' to="/category">Category</Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link to=''>Products</Nav.Link>
+        <Link className='nav-link' to='/Product'>Products</Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link >Blog</Nav.Link>
+        <Link className='nav-link' to='/blog'>Blog</Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link>Pages</Nav.Link>
+        <Link className='nav-link'>Pages</Link>
       </Nav.Item>
     </Nav>
       </section>

@@ -5,18 +5,28 @@ import Navbarr from './component/Navbar';
 import SearchNav from './component/SearchNav';
 import TopAdvert from './component/TopAdvert';
 import HomeContainer from './pages/HomeContainer';
-
+import SingleProduct from './pages/SingleProduct';
+import Product from './pages/Product'
+import About from './pages/About';
 function App() {
   return (
     <div className="App">
       <TopAdvert/>
       <SearchNav/>
       <Navbarr/>
-      <HomeContainer/>
-      <Footer/>
       <Routes>
-        <Route path='/about' />
+        <Route path='/' element={<HomeContainer/>}/>
+        <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
+        <Route path='/product' element={<Product/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/shippingpolicy' element={<SingleProduct/>}/>
+        <Route path='/refundpolicy' element={<SingleProduct/>}/>
+        <Route path='/shippingpolicy'  element={<SingleProduct/>}/>
+        <Route path='/contact'  element={<SingleProduct/>}/>
+        <Route path='/location'  element={<SingleProduct/>}/>
+        <Route path='/termsofservice'  element={<SingleProduct/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }
