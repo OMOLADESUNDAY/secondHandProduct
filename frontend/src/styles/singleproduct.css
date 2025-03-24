@@ -4,3 +4,11 @@
 .image-conatiner-single-product{
     width: 60%;
 }
+.single-product-image{
+    width: 100%;
+    object-fit: cover;
+    height: 70vh;
+}
+.properties-container{
+    display: flex;
+}
