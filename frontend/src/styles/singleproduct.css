@@ -21,6 +21,12 @@
 .counter{
     font-size: 1.2rem;
     background-color: bisque;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     border-radius: 50%;
+}
+.product-quantity{
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
 }

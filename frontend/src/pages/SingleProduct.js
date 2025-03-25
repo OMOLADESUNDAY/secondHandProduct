@@ -13,7 +13,16 @@ const SingleProduct = () => {
     setSelectedOption(event.target.value);
     console.log(selectedOption)
   };
-
+  const updatequantity = (sign) => {
+    setProductQuantity((prev) => {
+      if (sign === "add") {
+        return prev + 1;
+      } else if (sign === "minus") {
+        return prev > 1 ? prev - 1 : 1; 
+      }
+      return prev;
+    });
+  };
   let params=useParams()
   const id=params.id
   const product=products.find((productId)=>productId.id.toString() === id)
@@ -85,7 +94,7 @@ const SingleProduct = () => {
           }
         </div>
         <div className='quantity-container'>
-        <FiMinus className='counter'/><small>{productQuantity}</small><MdAdd className='counter' />
+        <FiMinus className='counter' onClick={()=>updatequantity('minus')}/><small className='product-quantity'>{productQuantity}</small><MdAdd className='counter' onClick={()=>updatequantity('add')} />
         </div>
         </div>
       </div>
