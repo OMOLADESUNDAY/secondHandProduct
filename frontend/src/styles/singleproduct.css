@@ -12,3 +12,15 @@
 .properties-container{
     display: flex;
 }
+.quantity-container{
+    display: flex;
+    align-items: center !important;
+    gap: 1rem;
+    border: solid;
+}
+.counter{
+    font-size: 1.2rem;
+    background-color: bisque;
+    padding: 0.5rem;
+    border-radius: 50%;
+}

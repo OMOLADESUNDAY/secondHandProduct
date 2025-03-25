@@ -3,9 +3,12 @@ import { products } from '../data'
 import { useParams } from 'react-router-dom'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import '../styles/singleproduct.css'
+import { MdAdd } from "react-icons/md";
+import { FiMinus } from "react-icons/fi";
 
 const SingleProduct = () => {
   const [selectedOption, setSelectedOption] = useState("");
+  const [productQuantity,setProductQuantity]=useState(1)
   const handleRadioChange = (event) => {
     setSelectedOption(event.target.value);
     console.log(selectedOption)
@@ -80,6 +83,9 @@ const SingleProduct = () => {
               )
             })}</div>:''
           }
+        </div>
+        <div className='quantity-container'>
+        <FiMinus className='counter'/><small>{productQuantity}</small><MdAdd className='counter' />
         </div>
         </div>
       </div>
