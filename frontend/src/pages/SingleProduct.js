@@ -6,6 +6,7 @@ import '../styles/singleproduct.css'
 import { MdAdd } from "react-icons/md";
 import { FiMinus } from "react-icons/fi";
 import Faq from '../component/Faq';
+import RelatedProject from '../component/RelatedProject';
 
 const SingleProduct = () => {
   const [selectedItem, setSelectedItem] = useState("");
@@ -14,15 +15,12 @@ const SingleProduct = () => {
   const [productQuantity,setProductQuantity]=useState(1)
   const handleItemChange = (event) => {
     setSelectedItem(event.target.value);
-    // console.log(selectedOption)
   };
   const handleSizeChange = (event) => {
     setSelectedSize(event.target.value);
-    // console.log(selectedOption)
   };
   const handleColorChange = (event) => {
     setSelectedColor(event.target.value);
-    // console.log(selectedOption)
   };
   const updatequantity = (sign) => {
     setProductQuantity((prev) => {
@@ -120,6 +118,7 @@ const SingleProduct = () => {
         </button>
         </div>
       </div>
+      <RelatedProject category={product.category} />
       <Faq/>
     </div>
   )

@@ -1,0 +1,10 @@
+.related-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.related-txt{
+    text-align: center;
+    padding: 2rem;
+}
