@@ -58,7 +58,38 @@ export const products = [
     { size: ['9', '10', '11'], color: ['Black', 'Brown'],brand:'nike',sold:38,no_of_reveiw: 9, category: 'featured', id: 41, name: 'Science Book', image: 'https://i.im.ge/2025/03/12/pdtcvh.s-l500-removebg-preview.png', price: 19.99, no_of_stock: 80, author: 'Author B', genre: 'Science', rating: 4.2 },
     { size: ['9', '10', '11'], color: ['Black', 'Brown'],brand:'nike',sold:38,no_of_reveiw: 29, category: 'featured', id: 42, name: 'Cookbook', image: 'https://i.im.ge/2025/03/12/pdPyYP.still-life-rendering-jackets-display-23-2149745045.jpeg', price: 24.99, no_of_stock: 60, author: 'Chef C', genre: 'Cook',rating:4.6}
 ]
-
+export const categoryData=[
+  { 
+    id: 1,  
+    category: "Phones", 
+    image: 'https://i.im.ge/2025/03/12/pdtOXC.26be56634ad9773c9d8f6315cac2cba7.jpeg'
+  },
+  { 
+    id: 2, 
+    category: "Books", 
+    image: 'https://i.im.ge/2025/03/12/pdNJLP.3adcff7a670cde2ea2bb8ceadb6cceac.jpeg' 
+  },
+  { 
+    id: 3, 
+    category: "Electronics", 
+    image: "'https://i.im.ge/2025/03/12/pdtbC8.76f93b5e7932b2f6342ce0aa79a614a6.jpeg'" 
+  },
+  { 
+    id: 4, 
+    category: "Shoes", 
+    image: 'https://i.im.ge/2025/03/12/pdtN2y.stylish-modern-sneaker-design-white-gray-black-red-teal-accents-thick-sole-casual-footwear-trendy-shoe-632498-30181.jpeg'
+  },
+  { 
+    id: 5, 
+    category: "Health product", 
+    image: 'https://i.im.ge/2025/03/12/pdPJZ6.health-product1-1.webp' 
+  },
+  { 
+    id: 6, 
+    category: "health product", 
+    image: 'https://i.im.ge/2025/03/12/pdPO4a.6966eb04114cc967b50877d872f154fa.jpeg' 
+  }
+]
 export const testimonialdata = [
     {
       id: 1,
