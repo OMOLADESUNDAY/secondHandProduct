@@ -1,0 +1,12 @@
+.category-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.category-image{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}

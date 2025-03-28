@@ -72,7 +72,7 @@ export const categoryData=[
   { 
     id: 3, 
     category: "Electronics", 
-    image: "'https://i.im.ge/2025/03/12/pdtbC8.76f93b5e7932b2f6342ce0aa79a614a6.jpeg'" 
+    image: "https://i.im.ge/2025/03/12/pdtbC8.76f93b5e7932b2f6342ce0aa79a614a6.jpeg" 
   },
   { 
     id: 4, 
