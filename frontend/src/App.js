@@ -12,6 +12,8 @@ import Category from './pages/Category';
 import { products } from "./data";
 import SingleCategory from './pages/SingleCategory';
 import Blogg from './pages/Blog';
+import Register from './pages/Register';
+import Login from './pages/Login';
 function App() {
   return (
     <div className="App">
@@ -32,6 +34,8 @@ function App() {
         <Route path='/location'  element={<SingleProduct/>}/>
         <Route path='/termsofservice'  element={<SingleProduct/>}/>
         <Route path='/category'  element={<Category/>}/>
+        <Route path='/register'  element={<Register/>}/>
+        <Route path='/login'  element={<Login/>}/>
       </Routes>
       <Footer/>
     </div>
