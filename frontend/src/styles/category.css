@@ -10,3 +10,13 @@
     height: 300px;
     object-fit: cover;
 }
+.category-link{
+    text-decoration: none;
+    text-align: center;
+}
+.cate-txt{
+    padding: 1rem 0;
+}
+.category-container{
+    padding: 1rem 0;
+}

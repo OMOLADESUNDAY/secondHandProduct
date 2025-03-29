@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
@@ -12,18 +11,14 @@ import 'swiper/css/scrollbar';
 import '../styles/blog.css'
 import SingleBlog from './SingleBlog';
 
-
 const newsApikey=process.env.REACT_APP_NEWSAPIKEY
-console.log(newsApikey)
 const Blog = () => {
-    
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
         const fetchNews = async () => {
           const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsApikey}`;
-    
           try {
             const response = await fetch(url);
             if (!response.ok) {
@@ -31,7 +26,6 @@ const Blog = () => {
             }
             const data = await response.json();
             setArticles(data.articles); // Save articles in state
-            console.log(data)
           } catch (err) {
             setError(err.message);
           } finally {

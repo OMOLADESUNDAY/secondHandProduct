@@ -9,6 +9,9 @@ import SingleProduct from './pages/SingleProduct';
 import Product from './pages/Product'
 import About from './pages/About';
 import Category from './pages/Category';
+import { products } from "./data";
+import SingleCategory from './pages/SingleCategory';
+import Blogg from './pages/Blog';
 function App() {
   return (
     <div className="App">
@@ -18,8 +21,10 @@ function App() {
       <Routes>
         <Route path='/' element={<HomeContainer/>}/>
         <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
-        <Route path='/product' element={<Product/>}/>
+        <Route path='/category/:id' element={<SingleCategory />}/>
+        <Route path='/product' element={<Product products={products}/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/blog' element={<Blogg/>}/>
         <Route path='/shippingpolicy' element={<SingleProduct/>}/>
         <Route path='/refundpolicy' element={<SingleProduct/>}/>
         <Route path='/shippingpolicy'  element={<SingleProduct/>}/>

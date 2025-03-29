@@ -6,14 +6,14 @@ import {Link} from 'react-router-dom'
 const Category = () => {
  
   return (
-    <div>
+    <div className='category-container'>
         <h3>Shop by Category</h3>
         <div className='category-wrapper'>
           {categoryData.map((singleCategory,index)=>{
             return(
-              <Link key={index}>
+              <Link className='category-link' key={index} to={`/category/${singleCategory.category}`} >
                 <img className='category-image' src={singleCategory.image} alt={singleCategory.category} />
-                <h4>{singleCategory.category}</h4>
+                <h5 className='cate-txt'>{singleCategory.category}</h5>
               </Link>
             )
           })}

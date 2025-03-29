@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import StarRating from './StarRating';
 import { Link } from 'react-router-dom';
@@ -12,7 +11,7 @@ const ProductCard = ({singlefeaturedproduct}) => {
         <Card.Text>
           {singlefeaturedproduct.description}
         </Card.Text>
-        <Link to={`/singleproduct/${singlefeaturedproduct.id}`} variant="primary">Add to Cart</Link>
+        <Link className='btn' style={{border:'0.5px solid red',borderRadius:'5px',backgroundColor:'red',color:'white'}} to={`/singleproduct/${singlefeaturedproduct.id}`} variant="primary">Add to Cart</Link>
         <StarRating rating={singlefeaturedproduct.rating}/>
         <small>No of reviews: {singlefeaturedproduct.no_of_reveiw}</small>
       </Card.Body>

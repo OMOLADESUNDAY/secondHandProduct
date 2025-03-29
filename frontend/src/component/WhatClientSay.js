@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
+
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
 
@@ -14,9 +14,6 @@ import '../styles/blog.css'
 import SingleTestimony from './SingleTestimony';
 import { testimonialdata } from '../data';
 const WhatClientSay = () => {
-    
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
   return (
     <div className='blog-container'>
     <h2 className='blog-txt'>What Client Says</h2>

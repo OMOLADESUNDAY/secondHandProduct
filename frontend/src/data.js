@@ -61,32 +61,32 @@ export const products = [
 export const categoryData=[
   { 
     id: 1,  
-    category: "Phones", 
+    category: "phones", 
     image: 'https://i.im.ge/2025/03/12/pdtOXC.26be56634ad9773c9d8f6315cac2cba7.jpeg'
   },
   { 
     id: 2, 
-    category: "Books", 
+    category: "books", 
     image: 'https://i.im.ge/2025/03/12/pdNJLP.3adcff7a670cde2ea2bb8ceadb6cceac.jpeg' 
   },
   { 
     id: 3, 
-    category: "Electronics", 
+    category: "electronics", 
     image: "https://i.im.ge/2025/03/12/pdtbC8.76f93b5e7932b2f6342ce0aa79a614a6.jpeg" 
   },
   { 
     id: 4, 
-    category: "Shoes", 
+    category: "shoes", 
     image: 'https://i.im.ge/2025/03/12/pdtN2y.stylish-modern-sneaker-design-white-gray-black-red-teal-accents-thick-sole-casual-footwear-trendy-shoe-632498-30181.jpeg'
   },
   { 
     id: 5, 
-    category: "Health product", 
+    category: "health product", 
     image: 'https://i.im.ge/2025/03/12/pdPJZ6.health-product1-1.webp' 
   },
   { 
     id: 6, 
-    category: "health product", 
+    category: "auto mobile", 
     image: 'https://i.im.ge/2025/03/12/pdPO4a.6966eb04114cc967b50877d872f154fa.jpeg' 
   }
 ]

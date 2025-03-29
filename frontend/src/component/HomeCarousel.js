@@ -33,7 +33,7 @@ const HomeCarousel = () => {
     };
   }, []);
   return (
-    <Carousel className='carouselcontainer'controls={false}  interval={intervalTime} indicators={indicator}>
+    <Carousel className='carouselcontainer' controls={false} interval={intervalTime} indicators={indicator}>
       <Carousel.Item className='carouselItem'>
         <img alt='k' src={ExampleCarouselImage} className='carouselImage' text="First slide" />
         <Carousel.Caption className='carouselCaption'>
