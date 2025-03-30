@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 const Register = () => {
-    const 
+    const [eyeopen,setEyeOpen]=useState(false)
+    const [inputType,setInputType]=useState('password')
+
+    const openeyehandler=()=>{
+        setEyeOpen(true)
+        setInputType('text')
+    }
+    const closeeyehandler=()=>{
+        setEyeOpen(false)
+        setInputType('password')
+    }
   return (
     <div>
         <h4>Register</h4>
@@ -17,9 +27,9 @@ const Register = () => {
                     <input type="email" placeholder='email' id='email'/>
                     <label htmlFor="email">email</label>
                 <div>
-                   <div><input type="password" placeholder='password' id='password'/><FaEye /><FaEyeSlash /></div> 
+                   <div><input type={inputType} placeholder='password' id='password'/>{eyeopen?<FaEye  onClick={()=>closeeyehandler()} />:<FaEyeSlash  onClick={()=>openeyehandler()}/>}</div> 
                     <label htmlFor="password">password</label>   
-                    <div><input type="password" placeholder='confirm password' id='password'/></div>
+                    <div><input type={inputType} placeholder='confirm password' id='password'/>{eyeopen?<FaEye  onClick={()=>closeeyehandler()}/>:<FaEyeSlash  onClick={()=>openeyehandler()}/>}</div>
                     <label htmlFor="confirmpassword">confirmpassword</label>
                 </div>
             <button type='submit'>submit</button>
