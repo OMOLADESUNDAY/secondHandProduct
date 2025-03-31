@@ -1,0 +1,24 @@
+.register-container{
+    
+}
+.reg-txt{
+    text-align: center;
+}
+
+.register-wrapper{
+    width: 60%;
+    border: solid;
+    margin: auto;
+}
+.reg-form{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.two-input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+}
