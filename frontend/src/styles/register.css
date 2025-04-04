@@ -1,24 +1,53 @@
-.register-container{
-    
-}
 .reg-txt{
     text-align: center;
+    margin-top:1rem;
 }
-
 .register-wrapper{
     width: 60%;
-    border: solid;
     margin: auto;
+    /* border: solid; */
 }
 .reg-form{
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    width:70%;
+    margin: auto;
+    padding: 2rem;
+    /* border: solid; */
 }
-.two-input-container{
+.submit-btn-container{
+    width: 100%;   
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    margin: 1rem 0;
+}
+.email-input{
+    width: 100%;
+}
+.reg-submit-btn{
+    width: 50%;
+    margin: auto;
+    background-color: red;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
 
+.two-input-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+.inputs{
+    padding: 0.5rem;
+}
+.p-input-container{
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    padding-right: 0.2rem;
+}
+.p-input{
+    border: none;
+    outline: none;
 }
