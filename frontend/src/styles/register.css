@@ -5,13 +5,11 @@
 .register-wrapper{
     width: 60%;
     margin: auto;
-    /* border: solid; */
 }
 .reg-form{
     width:70%;
     margin: auto;
-    padding: 2rem;
-    /* border: solid; */
+  
 }
 .submit-btn-container{
     width: 100%;   
@@ -26,9 +24,10 @@
 .reg-submit-btn{
     width: 50%;
     margin: auto;
-    background-color: red;
+    background-color: black;
     padding: 0.5rem;
     border-radius: 5px;
+    color: white;
 }
 
 .two-input-container{
@@ -50,4 +49,19 @@
 .p-input{
     border: none;
     outline: none;
+}
+.p-input-container-login{
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    padding-right: 0.2rem;
+}
+.label{
+    margin: 0.5rem 0;
+}
+.p-input-login{
+    width: 100%;
+}
+.login-form{
+    width: 50% !important;
 }
