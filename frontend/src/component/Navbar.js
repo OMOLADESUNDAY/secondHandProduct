@@ -86,7 +86,7 @@ const Navbarr = () => {
     </Nav>
       </section>
       <aside className='navbarRight'>
-      <FiPhone /><span><b>Call us:</b>+2347069258526</span>
+      <FiPhone /><span><b>Call us:</b>+2347030015053</span>
       </aside>
   </nav>
   );

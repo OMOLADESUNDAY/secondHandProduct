@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import logo from "../assest/WhatsApp Image 2025-02-16 at 6.26.47 PM.jpeg"
+// import logo from "../assest/WhatsApp Image 2025-02-16 at 6.26.47 PM.jpeg"
+import logo from "../assest/donzo-image.png"
 import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';

@@ -37,27 +37,28 @@ const HomeCarousel = () => {
       <Carousel.Item className='carouselItem'>
         <img alt='k' src={ExampleCarouselImage} className='carouselImage' text="First slide" />
         <Carousel.Caption className='carouselCaption'>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Welcome to Michael Store</h3>
+          <p>Your one-stop online shop for everything you need — from electronics to fashion, health products, and more!</p>
           <Button variant="danger">Shop Now</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item  className='carouselItem remove-carousel'> 
         <img src={image2} alt='kf' className='carouselImage' text="Second slide" />
         <Carousel.Caption className='carouselCaption'>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Button variant="danger">Shop Now</Button>
+          <h3>🔥 Hot Deals & Discounts</h3>
+          <p>Discover unbeatable prices on top-quality products.
+          New arrivals, bestsellers, and seasonal sales – all in one place!</p>
+          <Button variant="danger"> View Offers</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item  className='carouselItem remove-carousel'>
         <img src={image3} alt='kfl' className='carouselImage' text="Third slide" />
         <Carousel.Caption className='carouselCaption'>
-          <h3>Third slide label</h3>
+          <h3>🗂️ Shop by Category</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          Browse our wide selection of phones, fashion, health products, books, and more. Find exactly what you need in just a few clicks.
           </p>
-          <Button variant="danger">Shop Now</Button>
+          <Button variant="danger">📂 Explore Categories</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

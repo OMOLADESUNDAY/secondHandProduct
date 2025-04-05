@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
             {(openIndex === 0 || !isMobile) && (
               <article>
-                <p>The exciting contemporary brand Suruchi is known for its attention to detail and premium graphics.</p>
+                <p>I'm Michael, the founder of Michael Store — an online marketplace built to make shopping easier, faster, and more affordable. Passionate about quality and customer satisfaction, I’m here to bring you the best from every category, all in one place.</p>
                 <div className="footer-social">
                   <a href="#home"><FaXTwitter /></a>
                   <a href="#features"><FaFacebook /></a>
@@ -140,7 +140,7 @@ const Footer = () => {
                 </Nav>
                 <Nav className="topadCenter" >
                 <Nav.Link href="#features" className='middleTopadCenter'> <span className='welcomeText' >
-                Powered by ossnet technologies</span></Nav.Link>
+                Powered by MichealStore</span></Nav.Link>
                    
                 </Nav>
                 <Nav className="ms-auto leftTopAd">
