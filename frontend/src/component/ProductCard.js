@@ -13,7 +13,7 @@ const ProductCard = ({singlefeaturedproduct}) => {
         <Card.Text>
           {singlefeaturedproduct.description}
         </Card.Text>
-        <Link className='btn' onClick={() => addToCart(singlefeaturedproduct)} style={{border:'0.5px solid red',borderRadius:'5px',backgroundColor:'red',color:'white'}} to={`/singleproduct/${singlefeaturedproduct.id}`} variant="primary">Add to Cart</Link>
+        <button className='btn' onClick={() => addToCart(singlefeaturedproduct)} style={{border:'0.5px solid red',borderRadius:'5px',backgroundColor:'red',color:'white'}} to={`/singleproduct/${singlefeaturedproduct.id}`} variant="primary">Add to Cart</button>
         <StarRating rating={singlefeaturedproduct.rating}/>
         <small>No of reviews: {singlefeaturedproduct.no_of_reveiw}</small>
       </Card.Body>

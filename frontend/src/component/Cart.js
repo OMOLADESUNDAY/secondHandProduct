@@ -11,6 +11,7 @@ const Cart = () => {
       ) : (
         items.map((item) => (
           <div key={item.id}>
+            {console.log(item)}
             <p>{item.title} x {item.quantity}</p>
             <p>${item.price * item.quantity}</p>
             <button onClick={() => removeFromCart(item.id)}>Remove</button>

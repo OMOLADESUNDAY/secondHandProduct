@@ -17,6 +17,7 @@ import Tabs from 'react-bootstrap/esm/Tabs';
 import PageNavbar from './PageNumber';
 import NavLogs from './NavLogs';
 import Category from './Category';
+import { Navigate } from 'react-router-dom';
 const SearchNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,7 +65,7 @@ const SearchNav = () => {
           <CiSearch className='popsearchNavIcon'/>
               <RiUser3Line className='searchNavmenuIcon'/>
               <FiHeart className='searchNavmenuIcon' />
-              <RiShoppingBag4Line className='searchNavmenuIcon'/>
+              <RiShoppingBag4Line onClick={()=>Navigate('/cart')} className='searchNavmenuIcon'/>
             </div>
           </Nav>
       </Container>

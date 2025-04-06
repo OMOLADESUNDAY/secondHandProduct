@@ -14,6 +14,7 @@ import SingleCategory from './pages/SingleCategory';
 import Blogg from './pages/Blog';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Cart from './component/Cart';
 function App() {
   return (
     <div className="App">
@@ -36,6 +37,7 @@ function App() {
         <Route path='/category'  element={<Category/>}/>
         <Route path='/register'  element={<Register/>}/>
         <Route path='/login'  element={<Login/>}/>
+        <Route path='/cart'  element={<Cart/>}/>
       </Routes>
       <Footer/>
     </div>
