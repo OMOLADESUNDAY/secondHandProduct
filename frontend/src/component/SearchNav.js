@@ -17,14 +17,14 @@ import Tabs from 'react-bootstrap/esm/Tabs';
 import PageNavbar from './PageNumber';
 import NavLogs from './NavLogs';
 import Category from './Category';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const SearchNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
-
+const navigate=useNavigate()
   return (
     <>
     <Navbar expand="" >
@@ -65,7 +65,7 @@ const SearchNav = () => {
           <CiSearch className='popsearchNavIcon'/>
               <RiUser3Line className='searchNavmenuIcon'/>
               <FiHeart className='searchNavmenuIcon' />
-              <RiShoppingBag4Line onClick={()=>Navigate('/cart')} className='searchNavmenuIcon'/>
+              <RiShoppingBag4Line onClick={()=>navigate('/cart')} className='searchNavmenuIcon'/>
             </div>
           </Nav>
       </Container>
