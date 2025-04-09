@@ -7,8 +7,11 @@ import { MdAdd } from "react-icons/md";
 import { FiMinus } from "react-icons/fi";
 import Faq from '../component/Faq';
 import RelatedProject from '../component/RelatedProject';
-
+import { useCart } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 const SingleProduct = () => {
+  const { addToCart } = useCart();
+  const navigate=useNavigate()
   const [selectedItem, setSelectedItem] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
@@ -108,12 +111,12 @@ const SingleProduct = () => {
                 <div className='quantity-container'>
                 <FiMinus className='counter' onClick={()=>updatequantity('minus')}/><small className='product-quantity'>{productQuantity}</small><MdAdd className='counter' onClick={()=>updatequantity('add')} />
                 </div>
-                <button className="add-to-cart-btn">
+                <button className="add-to-cart-btn" onClick={()=>addToCart(product,productQuantity,selectedColor,selectedItem,selectedSize)}>
                   Add to cart
                 </button>
               </div>
         </div>
-        <button className='buy-now-btn'>
+        <button className='buy-now-btn' onClick={()=>navigate('/cart')} >
           Buy Now
         </button>
         </div>

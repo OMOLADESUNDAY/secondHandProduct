@@ -4,11 +4,10 @@ import StarRating from './StarRating';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 const ProductCard = ({singlefeaturedproduct}) => {
-  const { addToCart } = useCart();
+  // const { addToCart } = useCart();
   const navigate=useNavigate()
   const addCartFunction=(singlefeaturedproduct)=>{
-    addToCart(singlefeaturedproduct)
-    navigate('/')
+    navigate(`/singleproduct/${singlefeaturedproduct.id}`)
   }
 
   return (
@@ -19,7 +18,7 @@ const ProductCard = ({singlefeaturedproduct}) => {
         <Card.Text>
           {singlefeaturedproduct.description}
         </Card.Text>
-        <button className='btn' onClick={() => addCartFunction(singlefeaturedproduct)} style={{border:'0.5px solid red',borderRadius:'5px',backgroundColor:'red',color:'white'}} to={`/singleproduct/${singlefeaturedproduct.id}`} variant="primary">Add to Cart</button>
+        <button className='btn' onClick={() => addCartFunction(singlefeaturedproduct)} style={{border:'0.5px solid red',borderRadius:'5px',backgroundColor:'red',color:'white'}}  variant="primary">View Product</button>
         <StarRating rating={singlefeaturedproduct.rating}/>
         <small>No of reviews: {singlefeaturedproduct.no_of_reveiw}</small>
       </Card.Body>

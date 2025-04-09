@@ -34,6 +34,12 @@
     cursor: pointer;
     font-weight: bolder !important;
 }
+.badge{
+    background-color:red !important;
+    color:white;
+    position:absolute;
+    top:-10px
+}
 
 @media screen and (max-width:1024px) {
    

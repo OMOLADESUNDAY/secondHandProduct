@@ -18,7 +18,10 @@ import PageNavbar from './PageNumber';
 import NavLogs from './NavLogs';
 import Category from './Category';
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import Badge from 'react-bootstrap/esm/Badge';
 const SearchNav = () => {
+  const { items } = useCart();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -65,7 +68,11 @@ const navigate=useNavigate()
           <CiSearch className='popsearchNavIcon'/>
               <RiUser3Line className='searchNavmenuIcon'/>
               <FiHeart className='searchNavmenuIcon' />
+              <div style={{position:'relative'}}>
               <RiShoppingBag4Line onClick={()=>navigate('/cart')} className='searchNavmenuIcon'/>
+              <Badge bg='danger' className='badge'>{items.length}</Badge>
+              </div>
+              
             </div>
           </Nav>
       </Container>

@@ -25,6 +25,8 @@ const Cart = () => {
                 <div>
                   <h6>{singleitem.name}</h6>
                   <p>{singleitem.price}</p>
+                  <p>{singleitem.name} x {singleitem.quantity}</p>
+                  <p>${singleitem.price * singleitem.quantity}</p>
                   <button onClick={() => removeFromCart(singleitem.id)}>remove</button>
                 </div>
               </div>
