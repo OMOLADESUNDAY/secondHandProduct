@@ -18,12 +18,15 @@ const SingleProduct = () => {
   const [productQuantity,setProductQuantity]=useState(1)
   const handleItemChange = (event) => {
     setSelectedItem(event.target.value);
+   
   };
   const handleSizeChange = (event) => {
     setSelectedSize(event.target.value);
+   
   };
   const handleColorChange = (event) => {
     setSelectedColor(event.target.value);
+  
   };
   const updatequantity = (sign) => {
     setProductQuantity((prev) => {
@@ -111,7 +114,7 @@ const SingleProduct = () => {
                 <div className='quantity-container'>
                 <FiMinus className='counter' onClick={()=>updatequantity('minus')}/><small className='product-quantity'>{productQuantity}</small><MdAdd className='counter' onClick={()=>updatequantity('add')} />
                 </div>
-                <button className="add-to-cart-btn" onClick={()=>addToCart(product,productQuantity,selectedColor,selectedItem,selectedSize)}>
+                <button className="add-to-cart-btn" onClick={()=>addToCart({...product,size:selectedSize,items:selectedItem,color:selectedColor})}>
                   Add to cart
                 </button>
               </div>

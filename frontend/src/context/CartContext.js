@@ -39,7 +39,7 @@ function cartReducer(state, action) {
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  const addToCart = (product,productQuantity,selectedColor,selectedItem,selectedSize) => {
+  const addToCart = (product) => {
     dispatch({ type: 'ADD_TO_CART', payload: product });
   };
 
