@@ -21,7 +21,8 @@ import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import Badge from 'react-bootstrap/esm/Badge';
 const SearchNav = () => {
-  const { items } = useCart();
+  // const { items } = useCart();
+  const { items = [] } = useCart();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {

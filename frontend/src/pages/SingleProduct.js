@@ -114,7 +114,7 @@ const SingleProduct = () => {
                 <div className='quantity-container'>
                 <FiMinus className='counter' onClick={()=>updatequantity('minus')}/><small className='product-quantity'>{productQuantity}</small><MdAdd className='counter' onClick={()=>updatequantity('add')} />
                 </div>
-                <button className="add-to-cart-btn" onClick={()=>addToCart({...product,size:selectedSize,items:selectedItem,color:selectedColor})}>
+                <button className="add-to-cart-btn" onClick={()=>addToCart(product)}>
                   Add to cart
                 </button>
               </div>
