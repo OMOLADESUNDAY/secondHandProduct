@@ -2,34 +2,28 @@ import { FiMinus } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
 import '../styles/cart.css'
 import { MdAdd } from 'react-icons/md';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { RiShoppingBag4Line } from 'react-icons/ri';
 const Cart = () => {
-  const { items = [] , total, removeFromCart } = useCart();
-  const [productQuantity,setProductQuantity]=useState(1)
-  const updatequantity = (sign) => {
-    setProductQuantity((prev) => {
-      if (sign === "add") {
-        return prev + 1;
-      } else if (sign === "minus") {
-        return prev > 1 ? prev - 1 : 1; 
-      }
-      return prev;
-    });
-  };
-  
+  const { items = [], total, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
   if(items.length===0){
     return(
-      <p>Cart is empty</p>
+      <div className='empty-cart-container'>
+
+          <p><span> <RiShoppingBag4Line className='searchNavmenuIcon'/></span>Cart is empty</p>
+          <Link className='add-to-cart-btn empty-cart-link' to='/product'>Check Products</Link>
+      </div>
+      
     )
   }
   return (
     <div>
-      <h3>Your Shopping Cart</h3>
-      <div>
-        <div>
-          <h4>Product</h4>
-          <h4>Quantity</h4>
-          <h4>Total</h4>
+      <h3 className='cart-txt'>Your Shopping Cart</h3>
+      <div className='cart-innner-container' >
+        <div className='cart-titles'>
+          <div>Product</div>
+          <div>Quantity</div>
+          <div>Total</div>
         </div>
         <hr />
         {items.map((singleitem)=>{
@@ -39,23 +33,24 @@ const Cart = () => {
                 <img src={singleitem.image} alt={singleitem.name} className='cart-img' />
                 <div>
                   <h6>{singleitem.name}</h6>
-                  <p>{singleitem.price}</p>
+                
                   <p>{singleitem.color}</p>
                   <p>{singleitem.size}</p>
                   <p>{singleitem.items}</p>
-               
-                  <p>${singleitem.price * singleitem.quantity}</p>
-                  <button onClick={() => removeFromCart(singleitem.id)}>remove</button>
+                  <p>${singleitem.price}</p>
+                  <button className="add-to-cart-btn" onClick={() => removeFromCart(singleitem.id)}>remove</button>
                 </div>
               </div>
               <div>
-                 <div className='quantity-container'>
-                                <FiMinus className='counter' onClick={()=>updatequantity('minus')}/><small className='product-quantity'>{singleitem.quantity}</small><MdAdd className='counter' onClick={()=>updatequantity('add')} />
-                </div>
-                <p>Quantity:{singleitem.name} x <b className='quantity-fig'>{singleitem.quantity}</b></p>
+              <div className='quantity-container'>
+                <FiMinus className='counter' onClick={() => decreaseQuantity(singleitem.id)} />
+                <small className='product-quantity'>{singleitem.quantity}</small>
+                <MdAdd className='counter' onClick={() => increaseQuantity(singleitem.id)} />
+            </div>
+                <p><span className='quantity-txt'>Quantity</span>:{singleitem.name} x <b className='quantity-fig'>{singleitem.quantity}</b></p>
               </div>
               <div>
-                <h4>Total: ${total.toFixed(2)}</h4>
+              <p>Quantity Price:<span className='quantity-txt'>${singleitem.quantity*singleitem.price}</span></p>
               </div>
             </div>
           )
@@ -72,7 +67,11 @@ const Cart = () => {
           </div>
         ))
       )} */}
-     
+      <div>
+      <h4>Total: ${total.toFixed(2)}</h4>
+      <button className="add-to-cart-btn" >Check Out</button>
+      </div>
+      
     </div>
   );
 };

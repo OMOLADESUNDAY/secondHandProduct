@@ -86,6 +86,33 @@ const getInitialState = () => {
 
 function cartReducer(state, action) {
   switch (action.type) {
+    case 'INCREASE_QUANTITY':
+  return {
+    ...state,
+    items: state.items.map((item) =>
+      item.id === action.payload ? { ...item, quantity: item.quantity + 1 } : item
+    ),
+    total: state.items.reduce((acc, item) =>
+      item.id === action.payload
+        ? acc + item.price * (item.quantity + 1)
+        : acc + item.price * item.quantity
+    , 0)
+  };
+
+case 'DECREASE_QUANTITY':
+  return {
+    ...state,
+    items: state.items.map((item) =>
+      item.id === action.payload && item.quantity > 1
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
+    ),
+    total: state.items.reduce((acc, item) =>
+      item.id === action.payload && item.quantity > 1
+        ? acc + item.price * (item.quantity - 1)
+        : acc + item.price * item.quantity
+    , 0)
+  };
     case 'ADD_TO_CART':
       const item = action.payload;
       const exist = state.items.find((i) => i.id === item.id);
@@ -127,9 +154,19 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = (id) => {
     dispatch({ type: 'REMOVE_FROM_CART', payload: id });
   };
-
+  const increaseQuantity = (id) => {
+    dispatch({ type: 'INCREASE_QUANTITY', payload: id });
+  };
+  
+  const decreaseQuantity = (id) => {
+    dispatch({ type: 'DECREASE_QUANTITY', payload: id });
+  };
   return (
-    <CartContext.Provider value={{ ...state, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{  ...state,
+      addToCart,
+      removeFromCart,
+      increaseQuantity,
+      decreaseQuantity}}>
       {children}
     </CartContext.Provider>
   );
