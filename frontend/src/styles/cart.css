@@ -14,9 +14,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 1rem 0;
 }
 .left-conatiner{
     display: flex;
+    gap: 0.5rem;
     align-items: center;
 }
 .cart-img{
@@ -31,7 +33,17 @@
 .quantity-fig{
     font-size: 1.4rem;
 }
-
+.cart-bottom{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.total-checkout{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 .empty-cart-container{
     min-height: 60vh;
     text-align: center;

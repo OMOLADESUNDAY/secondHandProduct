@@ -15,6 +15,7 @@ import Blogg from './pages/Blog';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Cart from './component/Cart';
+import ShippingAddress from './pages/ShippingAddress';
 function App() {
   return (
     <div className="App">
@@ -38,6 +39,7 @@ function App() {
         <Route path='/register'  element={<Register/>}/>
         <Route path='/login'  element={<Login/>}/>
         <Route path='/cart'  element={<Cart/>}/>
+        <Route path='/shippingaddress'  element={<ShippingAddress/>}/>
       </Routes>
       <Footer/>
     </div>

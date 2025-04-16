@@ -2,9 +2,10 @@ import { FiMinus } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
 import '../styles/cart.css'
 import { MdAdd } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { RiShoppingBag4Line } from 'react-icons/ri';
 const Cart = () => {
+  const navigate=useNavigate()
   const { items = [], total, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
   if(items.length===0){
     return(
@@ -15,6 +16,10 @@ const Cart = () => {
       </div>
       
     )
+  }
+  
+  const checkout=()=>{
+    navigate('/shippingaddress')
   }
   return (
     <div>
@@ -67,9 +72,15 @@ const Cart = () => {
           </div>
         ))
       )} */}
-      <div>
-      <h4>Total: ${total.toFixed(2)}</h4>
-      <button className="add-to-cart-btn" >Check Out</button>
+      <div className='cart-bottom'>
+          <div>
+              <Link to='/product' className="add-to-cart-btn empty-cart-link" >Continue Shopping</Link>
+          </div>
+          <div className='total-checkout'>
+            <h4>Total: ${total.toFixed(2)}</h4>
+            <button className="add-to-cart-btn" onClick={()=>checkout()} >Check Out</button>
+          </div>
+         
       </div>
       
     </div>
