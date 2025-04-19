@@ -1,0 +1,15 @@
+.shipping-txt{
+    text-align: center !important;
+}
+.shipping-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.shipping-btn{
+   
+    text-align: center;
+    width: 50%;
+    margin: auto !important;
+}
