@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import {
   GoogleMap,
   LoadScript,
@@ -32,7 +32,26 @@ const Googlemap = () => {
         setAddress(place.formatted_address);
       }
     };
-  
+    const getAddressFromCoords = async (lat, lng) => {
+      const apiKey = "AIzaSyBIdwDEWGs5DWfjz1gyARFaGm2fdCpgFdg"; // Replace with your actual key
+    
+      try {
+        const res = await fetch(
+          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`
+        );
+        const data = await res.json();
+    
+        if (data.status === "OK") {
+          const address = data.results[0]?.formatted_address;
+          console.log("Address:", address);
+          return address;
+        } else {
+          console.error("Geocoder failed due to:", data.status);
+        }
+      } catch (err) {
+        console.error("Error fetching geocode data:", err);
+      }
+    };
     const onMapClick = useCallback((e) => {
       const lat = e.latLng.lat();
       const lng = e.latLng.lng();
@@ -51,8 +70,13 @@ const Googlemap = () => {
         }
       });
     }, []);
+    useEffect(() => {
+      if (selectedPosition) {
+        getAddressFromCoords(selectedPosition.lat, selectedPosition.lng);
+      }
+    }, [selectedPosition]);
     return (
-        <LoadScript googleMapsApiKey="AIzaSyBVxnvSV9PfUutYWBm4s9lLN6ORi42hn3s" libraries={['places']}>
+        <LoadScript googleMapsApiKey="AIzaSyBIdwDEWGs5DWfjz1gyARFaGm2fdCpgFdg" libraries={['places']}>
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={mapCenter}

@@ -133,7 +133,7 @@ const ShippingAddress = () => {
           </div>
         
         </Form>
-        <Googlemap/>
+        {/* <Googlemap/> */}
       </Container>
     );
   

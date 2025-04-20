@@ -16,6 +16,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Cart from './component/Cart';
 import ShippingAddress from './pages/ShippingAddress';
+import Payment from './pages/Payment';
 function App() {
   return (
     <div className="App">
@@ -40,6 +41,7 @@ function App() {
         <Route path='/login'  element={<Login/>}/>
         <Route path='/cart'  element={<Cart/>}/>
         <Route path='/shippingaddress'  element={<ShippingAddress/>}/>
+        <Route path='/payment'  element={<Payment/>}/>
       </Routes>
       <Footer/>
     </div>
