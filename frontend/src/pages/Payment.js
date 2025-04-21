@@ -19,9 +19,6 @@ const userData = {
 };
 
 const encryptedPayload = encryptData(userData);
-
-
-
     const [paymentMethod, setPaymentMethod] = useState('card');
 
     const handleMethodChange = (method) => {
@@ -37,9 +34,7 @@ const encryptedPayload = encryptData(userData);
           <h2>Select Payment Method</h2>
           <div className="payment-options">
             <button onClick={() => handleMethodChange('card')} className={paymentMethod === 'card' ? 'active' : ''}>Credit/Debit Card</button>
-            <button onClick={() => handleMethodChange('paypal')} className={paymentMethod === 'paypal' ? 'active' : ''}>PayPal</button>
             <button onClick={() => handleMethodChange('cashapp')} className={paymentMethod === 'cashapp' ? 'active' : ''}>Cash App</button>
-            <button onClick={() => handleMethodChange('venmo')} className={paymentMethod === 'venmo' ? 'active' : ''}>Venmo</button>
           </div>
     
           <div className="payment-form">
@@ -61,29 +56,12 @@ const encryptedPayload = encryptData(userData);
               </form>
             )}
     
-            {paymentMethod === 'paypal' && (
-              <div className="paypal-info">
-                <p>Redirecting to PayPal...</p>
-                <a href="https://www.paypal.com" target="_blank" rel="noreferrer">
-                  <button className='btn btn-danger'>Pay with PayPal</button>
-                </a>
-              </div>
-            )}
-    
             {paymentMethod === 'cashapp' && (
               <div className="cashapp-info">
                 <p>Send to Cash App:</p>
                 <h4>$YourCashTag</h4>
                 <img src="/cashapp-qr.png" alt="Cash App QR" className="qr-img" /><br />
                 <Link className='btn btn-danger' href="">Confirm Payment</Link>
-              </div>
-            )}
-    
-            {paymentMethod === 'venmo' && (
-              <div className="venmo-info">
-                <p>Send to Venmo:</p>
-                <h4>@YourVenmoUser</h4>
-                <img src="/venmo-qr.png" alt="Venmo QR" className="qr-img" />
               </div>
             )}
           </div>
