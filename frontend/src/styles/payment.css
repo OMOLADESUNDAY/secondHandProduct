@@ -39,4 +39,9 @@
     width: 150px;
     margin-top: 1rem;
   }
-  
+  @media screen and (max-width:540px) {
+    .payment-container{
+      width: 95%;
+      margin: auto;
+    }
+  }

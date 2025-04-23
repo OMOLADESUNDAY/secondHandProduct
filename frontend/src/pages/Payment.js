@@ -34,7 +34,7 @@ const encryptedPayload = encryptData(userData);
           <h2>Select Payment Method</h2>
           <div className="payment-options">
             <button onClick={() => handleMethodChange('card')} className={paymentMethod === 'card' ? 'active' : ''}>Credit/Debit Card</button>
-            <button onClick={() => handleMethodChange('cashapp')} className={paymentMethod === 'cashapp' ? 'active' : ''}>Cash App</button>
+            {/* <button onClick={() => handleMethodChange('cashapp')} className={paymentMethod === 'cashapp' ? 'active' : ''}>Cash App</button> */}
           </div>
     
           <div className="payment-form">
@@ -56,14 +56,14 @@ const encryptedPayload = encryptData(userData);
               </form>
             )}
     
-            {paymentMethod === 'cashapp' && (
+            {/* {paymentMethod === 'cashapp' && (
               <div className="cashapp-info">
                 <p>Send to Cash App:</p>
                 <h4>$YourCashTag</h4>
                 <img src="/cashapp-qr.png" alt="Cash App QR" className="qr-img" /><br />
                 <Link className='btn btn-danger' href="">Confirm Payment</Link>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       );

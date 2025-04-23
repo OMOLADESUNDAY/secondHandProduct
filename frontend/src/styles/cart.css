@@ -55,3 +55,20 @@
 .empty-cart-link{
     text-decoration: none;
 }
+@media screen and (max-width:1024px) {
+    .cart-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .left-conatiner{
+        width: 95%;
+        margin: auto;
+    }
+    .cart-img{
+        width: 65%;
+    }
+    .cart-bottom{
+      display: block;
+      gap: 2rem;
+    }
+}

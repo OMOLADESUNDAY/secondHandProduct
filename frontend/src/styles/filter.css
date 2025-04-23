@@ -2,7 +2,9 @@
     padding: 10px 5px;
     border-radius: 10px;
     height: 100%;
-    /* margin: 0; */
+}
+.filtercontainer>h4{
+    padding-left: 2rem;
 }
 .filtertext{
     display: flex;

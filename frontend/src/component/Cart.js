@@ -46,7 +46,7 @@ const Cart = () => {
                   <button className="add-to-cart-btn" onClick={() => removeFromCart(singleitem.id)}>remove</button>
                 </div>
               </div>
-              <div>
+              <div className='outer-quantity-container'>
               <div className='quantity-container'>
                 <FiMinus className='counter' onClick={() => decreaseQuantity(singleitem.id)} />
                 <small className='product-quantity'>{singleitem.quantity}</small>

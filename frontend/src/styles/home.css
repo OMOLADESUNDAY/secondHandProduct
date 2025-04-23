@@ -1,8 +1,7 @@
 .HomeContainer{
     display: flex;
     min-height: 70vh;
-    /* border:solid red ; */
-    /* display: block; */
+   
 }
 .filterComponentContainer{
     width: 30%;
@@ -20,9 +19,6 @@
 @media screen and (max-width:1024px) {
     .HomeContainer{
         flex-direction:column;
-        /* flex-direction: column-reverse; */
-        /* border: solid red; */
-        border: solid;
     }
     .HomecarouselCont{
         width: 100%;

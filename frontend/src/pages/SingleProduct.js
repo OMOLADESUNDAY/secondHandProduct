@@ -9,20 +9,27 @@ import Faq from '../component/Faq';
 import RelatedProject from '../component/RelatedProject';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import NotificationModal from '../component/NotificationModal';
 const SingleProduct = () => {
+  const [cartLoading,setCartLoding]=useState(false)
   const { addToCart } = useCart();
   const navigate=useNavigate()
   const [selectedItem, setSelectedItem] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
   const [productQuantity,setProductQuantity]=useState(1)
+  const loaderAddtoCart = async (product) => {
+    setCartLoding(true);
+    await addToCart(product); // Wait for it to finish (if async)
+    setTimeout(() => {
+      setCartLoding(false);
+    }, 1000);
+  };
   const handleItemChange = (event) => {
     setSelectedItem(event.target.value);
-   
   };
   const handleSizeChange = (event) => {
     setSelectedSize(event.target.value);
-   
   };
   const handleColorChange = (event) => {
     setSelectedColor(event.target.value);
@@ -114,7 +121,8 @@ const SingleProduct = () => {
                 <div className='quantity-container'>
                 <FiMinus className='counter' onClick={()=>updatequantity('minus')}/><small className='product-quantity'>{productQuantity}</small><MdAdd className='counter' onClick={()=>updatequantity('add')} />
                 </div>
-                <button className="add-to-cart-btn" onClick={()=>addToCart(product)}>
+                {cartLoading?<NotificationModal/>:''}
+                <button className="add-to-cart-btn" onClick={()=>loaderAddtoCart(product)}>
                   Add to cart
                 </button>
               </div>

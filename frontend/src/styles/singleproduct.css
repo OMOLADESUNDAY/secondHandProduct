@@ -13,7 +13,6 @@
     width: 100%;
     object-fit: cover;
     height: 60vh;
-    
 }
 .properties-container{
     display: flex;
@@ -73,4 +72,13 @@
     border: 1px solid bisque;
     border-radius: 4px;
     color: white;
+}
+@media screen and (max-width:1024px) {
+    .top-single-product{
+        flex-direction: column;
+    }
+    .image-conatiner-single-product{
+        width: 95%;
+        margin: auto;
+    }
 }
