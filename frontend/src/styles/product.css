@@ -10,3 +10,8 @@
 .product-txt{
     padding: 1rem 0;
 }
+@media screen and (max-width:1024px) {
+    .product-inner-container{
+        justify-content: center;
+    }
+}

@@ -32,35 +32,28 @@ const Navbarr = () => {
         <article  ref={togglerRef} className={moveOut?'moveout':'outerCategoryContainer'}>
               <Nav className='outerCategoryNav'>
             <Nav.Item>
-              <Link className='nav-link' href="/home">Electronics</Link>
+              <Link className='nav-link' to='/' >Home</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Link className='nav-link'>Health Products</Link>
+              <Link className='nav-link' to='/shop'>Shop</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Link className='nav-link'>Fashion</Link>
+              <Link className='nav-link' to='/category'>Category</Link>
               <hr className='horiLine' />
             </Nav.Item>
             <Nav.Item>
-              <Link className='nav-link' to=''>Auto Mobiles</Link>
+              <Link className='nav-link' to='/product'>Product</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Link className='nav-link' >Phones</Link>
+              <Link className='nav-link' to='/blog'>Blog</Link>
               <hr className='horiLine'/>
             </Nav.Item>
             <Nav.Item>
-              <Link className='nav-link'>Books</Link>
+              <Link className='nav-link' to='/pages'>Pages</Link>
               <hr className='horiLine'/>
-            </Nav.Item>
-            <Nav.Item>
-              <Link className='nav-link' to=''>Shoes</Link>
-              <hr className='horiLine'/>
-            </Nav.Item>
-            <Nav.Item>
-              <Link className='nav-link' to=''>All Categories</Link>
             </Nav.Item>
           </Nav>
         </article>

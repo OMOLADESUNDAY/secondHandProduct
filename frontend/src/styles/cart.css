@@ -69,6 +69,12 @@
     }
     .cart-bottom{
       display: block;
-      gap: 2rem;
+    }
+    .total-checkout{
+        width: 100%;
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
