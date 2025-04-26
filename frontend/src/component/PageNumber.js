@@ -8,7 +8,7 @@ import Badge from 'react-bootstrap/Badge';
 import { useNavigate, Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
-const PageNavbar = () => {
+const PageNavbar = ({closeMenu}) => {
   const [activeKey, setActiveKey] = useState(null);
   const { items = [] } = useCart();
   const navigate = useNavigate();
@@ -19,6 +19,7 @@ const PageNavbar = () => {
 
   const handleLinkClick = () => {
     setActiveKey(null); // Close the accordion
+    closeMenu(false)
   };
 
   return (

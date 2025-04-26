@@ -3,7 +3,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import "../styles/pageNavbar.css"
 import Nav from 'react-bootstrap/Nav';
 
-const Category = () => {
+const Category = ({closeMenu}) => {
   
     return (
       <Accordion defaultActiveKey="0">

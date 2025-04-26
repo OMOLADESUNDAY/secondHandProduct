@@ -66,18 +66,23 @@
         position: relative;
     }
     .real-menu{
-        position: fixed;
+        position: fixed !important;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100% !important;
         height: 100vh;
         padding: 2rem !important;
         background-color: white;
         transform: translateX(0);
         animation: mover 1s ease-in-out;
         overflow: auto;
-        z-index: 10;
+        z-index: 10 !important;
     }
+    /* .cancel{
+        color: red !important;
+        z-index: 1000 !important;
+
+      } */
     @keyframes mover {
         from {
           left: -100%;
@@ -99,12 +104,12 @@
         z-index: 19 !important;
       }
      
-
+     
     .moveout{
-        position: fixed;
+        position: fixed !important;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100% !important;
         height: 100vh;
         padding: 2rem 0;
         color: blue;
@@ -112,6 +117,7 @@
         background-color: white;
         animation: moveoutt 2s ease-in-out; 
         /* background-color: red; */
+        z-index: 100 !important;
       }
       @keyframes moveoutt {
         from {

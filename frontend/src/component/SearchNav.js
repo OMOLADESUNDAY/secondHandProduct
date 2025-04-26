@@ -20,6 +20,7 @@ import Category from './Category';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import Badge from 'react-bootstrap/esm/Badge';
+
 const SearchNav = () => {
   // const { items } = useCart();
   const { items = [] } = useCart();
@@ -40,11 +41,21 @@ const navigate=useNavigate()
           <Nav className={isOpen?'real-menu':'moveout'} >
           <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="tabsContainer">
             <Tab eventKey="home" title="Home">
-              <PageNavbar/>
-              <NavLogs/>
+              {/* <PageNavbar closeMenu={() => setIsOpen(false)}/> */}
+
+
+
+        
+
+
+
+
+
+              <NavLogs closeMenu={() => setIsOpen(false)}/>
+                {console.log(isOpen)}
             </Tab>
             <Tab eventKey="category" title="category">
-             <Category/>
+             <Category closeMenu={() => setIsOpen(false)}/>
             </Tab>
           </Tabs>
         
