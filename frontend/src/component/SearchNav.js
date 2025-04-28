@@ -41,18 +41,9 @@ const navigate=useNavigate()
           <Nav className={isOpen?'real-menu':'moveout'} >
           <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="tabsContainer">
             <Tab eventKey="home" title="Home">
-              {/* <PageNavbar closeMenu={() => setIsOpen(false)}/> */}
-
-
-
-        
-
-
-
-
-
+              <PageNavbar closeMenu={() => setIsOpen(false)}/>
               <NavLogs closeMenu={() => setIsOpen(false)}/>
-                {console.log(isOpen)}
+                {console.log(isOpen)} 
             </Tab>
             <Tab eventKey="category" title="category">
              <Category closeMenu={() => setIsOpen(false)}/>
