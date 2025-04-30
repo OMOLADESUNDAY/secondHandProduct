@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import "../styles/pageNavbar.css"
 import Nav from 'react-bootstrap/Nav';
 import { RiShoppingBag4Line } from "react-icons/ri";
 import Badge from 'react-bootstrap/Badge';
 import { useNavigate, Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import { useNavbar } from '../context/NavbarContext';
+import "../styles/pageNavbar.css";
 
-const PageNavbar = ({closeMenu}) => {
+const PageNavbar = () => {
   const [activeKey, setActiveKey] = useState(null);
+  const { closeMenu } = useNavbar();
   const { items = [] } = useCart();
   const navigate = useNavigate();
 
@@ -18,8 +20,8 @@ const PageNavbar = ({closeMenu}) => {
   };
 
   const handleLinkClick = () => {
-    setActiveKey(null); // Close the accordion
-    closeMenu(false)
+    closeMenu();
+    setActiveKey(null);
   };
 
   return (
@@ -70,14 +72,16 @@ const PageNavbar = ({closeMenu}) => {
             <Link className='nav-link' to='/contact' onClick={handleLinkClick}>Contact Us</Link>
             <Link className='nav-link' to='/termsandcondition' onClick={handleLinkClick}>Terms & Conditions</Link>
             <Link className='nav-link' to='/policies' onClick={handleLinkClick}>Policies</Link>
-            <Link className='nav-link' to='/product' onClick={handleLinkClick}>Product</Link>
           </Nav>
         </Accordion.Body>
       </Accordion.Item>
 
       <Accordion.Item>
         <Accordion.Header className='blognavsmall'>
-          <Nav.Link className='blognavsmall' onClick={() => navigate('/cart')}>
+          <Nav.Link className='blognavsmall' onClick={() => {
+            navigate('/cart');
+            closeMenu();
+          }}>
             <RiShoppingBag4Line className='searchNavmenuIcon' />
             <Badge bg='danger' className='badge'>{items.length}</Badge>
           </Nav.Link>

@@ -99,7 +99,7 @@
         transition: left 0.3s ease-in-out;
     }
     .move-right {
-        top: -100%;
+        top: 0;
         left: 90%; /* Moves to the right when nav is open */
         z-index: 19 !important;
       }
