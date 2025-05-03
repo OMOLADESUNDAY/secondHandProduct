@@ -36,6 +36,7 @@ const SearchNav = () => {
             <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="tabsContainer">
               <Tab eventKey="home" title="Home">
                 <PageNavbar />
+                {console.log(isOpen)}
                 <NavLogs />
               </Tab>
               <Tab eventKey="category" title="category">
