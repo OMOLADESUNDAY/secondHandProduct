@@ -35,7 +35,7 @@ const SearchNav = () => {
           <Nav className={isOpen ? 'real-menu' : 'moveout'}>
             <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="tabsContainer">
               <Tab eventKey="home" title="Home">
-                <PageNavbar />
+                <PageNavbar isOpen={isOpen}/>
                 {console.log(isOpen)}
                 <NavLogs />
               </Tab>

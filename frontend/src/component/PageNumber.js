@@ -9,7 +9,7 @@ import { useCart } from '../context/CartContext';
 import { useNavbar } from '../context/NavbarContext';
 import "../styles/pageNavbar.css";
 
-const PageNavbar = () => {
+const PageNavbar = ({isOpen}) => {
   const [activeKey, setActiveKey] = useState(null);
   const { closeMenu } = useNavbar();
   const { items = [] } = useCart();
@@ -35,6 +35,7 @@ const PageNavbar = () => {
         </Accordion.Header>
         <Accordion.Body>
           <Nav>
+            {console.log("heyy"+isOpen)}
             <Nav.Item>
               <Link className='nav-link' to='/category' onClick={handleLinkClick}>Category</Link>
             </Nav.Item>
