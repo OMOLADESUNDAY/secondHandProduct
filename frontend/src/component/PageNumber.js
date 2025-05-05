@@ -35,7 +35,7 @@ const PageNavbar = ({isOpen}) => {
         </Accordion.Header>
         <Accordion.Body>
           <Nav>
-            {console.log("heyy"+isOpen)}
+            {console.log("hey"+isOpen)}
             <Nav.Item>
               <Link className='nav-link' to='/category' onClick={handleLinkClick}>Category</Link>
             </Nav.Item>

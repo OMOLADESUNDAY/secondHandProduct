@@ -1,0 +1,127 @@
+.navbar-container {
+    background: #fff;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+  
+  .nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .desktop-search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 0 1rem;
+  }
+  
+  .desktop-search input {
+    width: 100%;
+    padding: 0.4rem;
+    margin-right: 0.5rem;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cart-link {
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+  }
+  
+  .cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 50%;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .mobile-search {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .mobile-menu {
+    border-top: 1px solid #ccc;
+    padding: 1rem;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tabs button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+  }
+  
+  .tabs .active {
+    background: black;
+    color: white;
+  }
+  
+  .accordion-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem 0;
+  }
+  
+  .accordion-body a {
+    display: block;
+    padding: 0.25rem 0;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .accordion-body a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile Styles */
+  @media screen and (max-width: 768px) {
+    .desktop-search {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .mobile-search-toggle {
+      display: block;
+      cursor: pointer;
+    }
+  }

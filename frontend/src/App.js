@@ -17,11 +17,13 @@ import Login from './pages/Login';
 import Cart from './component/Cart';
 import ShippingAddress from './pages/ShippingAddress';
 import Payment from './pages/Payment';
+import ResponsiveNavbar from './component/ResponsiveNavbar';
 function App() {
   return (
     <div className="App">
       <TopAdvert/>
-      <SearchNav/>
+      {/* <SearchNav/> */}
+      <ResponsiveNavbar/>
       <Navbarr/>
       <Routes>
         <Route path='/' element={<HomeContainer/>}/>
