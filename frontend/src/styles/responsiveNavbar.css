@@ -1,8 +1,13 @@
+body.no-scroll {
+    overflow: hidden;
+    min-height: 100vh;
+  }
 .navbar-container {
     background: #fff;
     padding: 1rem;
     border-bottom: 1px solid #ddd;
     position: relative;
+    
   }
   
   .nav-top {
@@ -49,6 +54,9 @@
     color: white;
     font-size: 0.7rem;
     padding: 2px 5px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
     border-radius: 50%;
   }
   
@@ -64,10 +72,28 @@
     border-top: 1px solid #ddd;
   }
   
-  .mobile-menu {
+  /* .mobile-menu {
     border-top: 1px solid #ccc;
     padding: 1rem;
+  } */
+  .mobile-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full height */
+    background-color: white;
+    z-index: 9999;
+    padding: 1rem;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
   }
+  
+  .mobile-menu.hidden {
+    transform: translateX(-100%);
+  }
+  
   
   .tabs {
     display: flex;
@@ -109,9 +135,18 @@
   .accordion-body a:hover {
     text-decoration: underline;
   }
-  
+  .search-btn-func{
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .show-icons{
+    display: none;
+  }
   /* Mobile Styles */
   @media screen and (max-width: 768px) {
+    .show-icons{
+      display: block;
+    }
     .desktop-search {
       display: none;
     }
@@ -123,5 +158,16 @@
     .mobile-search-toggle {
       display: block;
       cursor: pointer;
+    }
+    .hidden-icons{
+        display: none;
+    }
+    .mobile-search{
+      width: 80%;
+      margin: auto;
+    }
+    .mobile-nav-search-input{
+      width: 90%;
+      margin: auto !important;
     }
   }

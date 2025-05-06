@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { FaBars, FaTimes, FaUser, FaPlus, FaMinus } from 'react-icons/fa';
 import { CiSearch } from 'react-icons/ci';
 import { RiUser3Line, RiShoppingBag4Line } from 'react-icons/ri';
@@ -6,13 +6,22 @@ import { FiHeart } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assest/donzo-image.png';
 import '../styles/responsiveNavbar.css';
-
+import { useCart } from '../context/CartContext';
+import Button from 'react-bootstrap/esm/Button';
 const ResponsiveNavbar = ({ cartItemsCount = 0 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchVisible, setSearchVisible] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
   const [activeAccordion, setActiveAccordion] = useState(null);
   const navigate = useNavigate();
+    const { items = [] } = useCart();
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [menuOpen]);
 
   const toggleAccordion = (key) => {
     setActiveAccordion(activeAccordion === key ? null : key);
@@ -66,15 +75,14 @@ const ResponsiveNavbar = ({ cartItemsCount = 0 }) => {
       <div className="accordion-body">
         <Link to="/cart" onClick={closeMenu} >
         <div className="cart-link">
-        <RiShoppingBag4Line /> <span className="cart-badge">{cartItemsCount}</span>
+        <RiShoppingBag4Line /> <span className="cart-badge">{items.length}</span>
         </div>
          
         </Link>
       </div>
-
       <h4>My Account</h4>
-      <Link to="/login" onClick={closeMenu}><FaUser /> Log in</Link>
-      <Link to="/signup" onClick={closeMenu}>Create account</Link>
+      <Link to="/login" style={{marginRight:'2rem'}} onClick={closeMenu}> <Button variant="danger"><FaUser /> Log in</Button></Link>
+      <Link to="/signup" onClick={closeMenu}><Button variant="danger"><FaUser /> Create account</Button></Link>
     </>
   );
 
@@ -97,16 +105,17 @@ const ResponsiveNavbar = ({ cartItemsCount = 0 }) => {
 
         <div className="desktop-search">
           <input type="text" placeholder="Search..." />
-          <CiSearch />
+          <CiSearch className='search-btn-func' />
         </div>
 
         <div className="icons">
-          <CiSearch className="mobile-search-toggle" onClick={() => setSearchVisible(!searchVisible)} />
-          <RiUser3Line />
-          <FiHeart />
-          <div onClick={() => navigate('/cart')} className="cart-icon">
+
+          {searchVisible ? <FaTimes style={{cursor:'pointer'}} onClick={()=>setSearchVisible(false)}/>:<CiSearch className="mobile-search-toggle show-icons" onClick={() => setSearchVisible(!searchVisible)} />}
+          <RiUser3Line className='hidden-icons' />
+          <FiHeart className='hidden-icons'/>
+          <div onClick={() => navigate('/cart')} className="cart-icon hidden-icons">
             <RiShoppingBag4Line />
-            <span className="cart-badge">{cartItemsCount}</span>
+            <span className="cart-badge">{items.length}</span>
           </div>
         </div>
 
@@ -117,7 +126,8 @@ const ResponsiveNavbar = ({ cartItemsCount = 0 }) => {
 
       {searchVisible && (
         <div className="mobile-search">
-          <input type="text" placeholder="Search..." />
+          <input type="text" placeholder="Search..." className='mobile-nav-search-input' />
+          <CiSearch className='search-btn-func'/>
         </div>
       )}
 
